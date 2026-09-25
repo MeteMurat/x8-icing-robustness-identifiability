@@ -5,7 +5,7 @@ type: software
 authors:
   - family-names: "Türkoğlu"
     given-names: "Murat Metehan"
-version: "1.0.0"
+version: "1.0.1"
 date-released: "2026-09-25"
 repository-code: "https://github.com/MeteMurat/x8-icing-robustness-identifiability"
-url: "https://github.com/MeteMurat/x8-icing-robustness-identifiability/releases/tag/v1.0.0"
+url: "https://github.com/MeteMurat/x8-icing-robustness-identifiability/releases/tag/v1.0.1"
