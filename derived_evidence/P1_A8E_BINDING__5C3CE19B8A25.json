@@ -1,0 +1,16 @@
+﻿{
+    "status":  "PASS_P1_A8E_FINAL_BATTERY_POWER_VALIDATION_ADJUDICATION_AND_CLAIM_FREEZE",
+    "timestamp_local":  "2026-09-19T12:47:48.2096080+03:00",
+    "project_root":  "E:\\İCİNG-PROJE",
+    "run_root":  "E:\\İCİNG-PROJE\\_P1_AUDIT\\P1_A8E_FINAL_BATTERY_POWER_CLAIM_FREEZE_20260919_124748",
+    "parent_p1_a8c_result_sha256":  "41D54A2DC55A8B5BFBBB6B045BC692D02BBA1A72964D8DCAE8F229BB6BF053B9",
+    "parent_p1_a8d_validation_sha256":  "A64E632EC0450820652CA979D1E52B732A441EC5CF36009DE1CCDD24179601D9",
+    "final_claim_freeze_contract":  {
+                                        "path":  "E:\\İCİNG-PROJE\\_P1_AUDIT\\P1_A8E_FINAL_BATTERY_POWER_CLAIM_FREEZE_20260919_124748\\P1_A8E_FINAL_BATTERY_POWER_CLAIM_FREEZE_CONTRACT.json",
+                                        "sha256":  "D1B1E716179BE7FBD5B9F9C1CD562D692427C60E92DBDC05C5EA3E4D8CDFAFAD"
+                                    },
+    "final_classification":  "TIER_1_VALIDATION_CONFIRMED_REFERENCE_STATE_ELECTRICAL_POWER_PENALTY",
+    "source_mutation":  "NONE",
+    "new_raw_outcomes_computed":  0,
+    "next_stage":  "P1-A8 BATTERY-POWER BRANCH CLOSED. Preserve identification and validation as separate estimates in manuscript tables/text. Do not derive endurance/range or pool effects."
+}

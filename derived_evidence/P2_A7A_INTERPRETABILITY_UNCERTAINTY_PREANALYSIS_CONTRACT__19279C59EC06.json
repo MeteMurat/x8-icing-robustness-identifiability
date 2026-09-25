@@ -1,0 +1,179 @@
+﻿{
+    "contract_name":  "NTNU_X8_ICING_P2_A7A_INTERPRETABILITY_AND_UNCERTAINTY_PREANALYSIS_FREEZE",
+    "timestamp_local":  "2026-09-19T20:38:02.2062264+03:00",
+    "provenance":  {
+                       "parent_p2_a6c_sha256":  "D4FFD48A51DB6D18E2C57A092938687CE61978DC7ECB50A4330E045096213605",
+                       "parent_p2_a6b_sha256":  "130A2C35531F4AD8C60A4549A95DE3D366C0E0FB195ADD8B015DC7EA627C50AC",
+                       "parent_p2_a6a_sha256":  "388B4180513A035EAD982644AC369AA4E1E81923EABC33FDBCAE771DC2041ADA",
+                       "parent_p2_a5c_sha256":  "8E428E8F0B596F15FB09A2BF96F5129A638B7C5D5E832E9002FDB70BA777907F",
+                       "parent_p2_a5b_r1_sha256":  "DA3CA039DBAF40CFF25CA740A32218D15DEEE12FB62F92D33553F774858D9EFB",
+                       "parent_p2_a4e_sha256":  "F5C02736D4EEFE0F4BB404138A40C558732441F167CC6F84EA1DE535F56FBF7E",
+                       "final_model_bundle_path":  "E:\\İCİNG-PROJE\\_P2_ML\\P2_A4E_FINAL_EXTRATREES_MODEL_FREEZE_20260919_174019\\P2_A4E_FINAL_EXTRATREES_DEVELOPMENT_MODEL.joblib",
+                       "final_model_bundle_sha256":  "1ADC46017D144EE830A0A42D64272695AC89C03D680D3A9BFE1407639A8E7EBB",
+                       "locked_predictions_path":  "E:\\İCİNG-PROJE\\_P2_ML\\P2_A5B_R1_RESUME_SAFE_LOCKED_EXTERNAL_VALIDATION_20260919_191740\\P2_A5B_R1_LOCKED_PREDICTIONS.csv",
+                       "locked_predictions_sha256":  "E49D9D77B52663946217EE6DFB9944A71CC786C13046EA6D58B428ACA31BC03F",
+                       "pair_target_errors_path":  "E:\\İCİNG-PROJE\\_P2_ML\\P2_A5B_R1_RESUME_SAFE_LOCKED_EXTERNAL_VALIDATION_20260919_191740\\P2_A5B_R1_LOCKED_PAIR_TARGET_ERRORS.csv",
+                       "pair_target_errors_sha256":  "EE65E9D791C4FE4C231934366DB7FE5F586E7390540B766CF8835A08B5D70B3E",
+                       "locked_stage_map_path":  "E:\\İCİNG-PROJE\\_P2_ML\\P2_A5B_ONE_SHOT_LOCKED_EXTERNAL_VALIDATION_20260919_184805\\P2_A5B_LOCKED_STAGE_MAP.csv",
+                       "locked_stage_map_sha256":  "97A688461DE5B85709AFD8C2E64D9C96EAA3B97611EF164380293E12018B157E",
+                       "support_reference_npz_path":  "E:\\İCİNG-PROJE\\_P2_ML\\P2_A6A_COUNTERFACTUAL_PHYSICS_PREANALYSIS_FREEZE_20260919_195714\\P2_A6A_COMMON_SUPPORT_REFERENCE.npz",
+                       "support_reference_npz_sha256":  "A0A8AC5741F6C5D062E96C00F4A55D332DDDAE5EF6828C199F1578E7CD3DA751"
+                   },
+    "exact_inputs":  [
+                         "Va_EKF_CG",
+                         "alpha",
+                         "beta",
+                         "p",
+                         "q",
+                         "r",
+                         "aileron",
+                         "elevator",
+                         "ice_status"
+                     ],
+    "continuous_features_for_primary_permutation":  [
+                                                        "Va_EKF_CG",
+                                                        "alpha",
+                                                        "beta",
+                                                        "p",
+                                                        "q",
+                                                        "r",
+                                                        "aileron",
+                                                        "elevator"
+                                                    ],
+    "targets":  [
+                    "Faero_X",
+                    "Faero_Y",
+                    "Faero_Z",
+                    "Maero_L",
+                    "Maero_M",
+                    "Maero_N"
+                ],
+    "permutation_importance_protocol":  {
+                                            "name":  "GROUP_PRESERVING_CONTINUOUS_FEATURE_PERMUTATION_IMPORTANCE",
+                                            "scientific_role":  "POST-HOC MODEL INTERPRETABILITY; NOT CAUSAL ATTRIBUTION",
+                                            "features_ranked":  [
+                                                                    "Va_EKF_CG",
+                                                                    "alpha",
+                                                                    "beta",
+                                                                    "p",
+                                                                    "q",
+                                                                    "r",
+                                                                    "aileron",
+                                                                    "elevator"
+                                                                ],
+                                            "ice_status_policy":  "EXCLUDED FROM GENERIC PERMUTATION RANKING; interpreted separately through the prospectively frozen P2-A6 counterfactual branch.",
+                                            "evaluation_cohort":  "exact 20,537-row P2-A5B-R1 locked validation cohort",
+                                            "strata":  "EXACT_PAIR x OBSERVED_CONFIGURATION",
+                                            "permutation":  "For feature k and repeat r, independently permute feature k only within each\nexact-pair x observed-configuration stratum. All other predictors, targets,\nidentities, and ice_status remain unchanged.",
+                                            "rationale":  "Preserves exact-pair/configuration distributions while breaking within-stratum pointwise association for one continuous predictor.",
+                                            "repeats":  20,
+                                            "random_seed":  20260919,
+                                            "execution":  "For each repeat, stack all 8 single-feature-permuted cohorts and perform one model.predict call; total planned permutation predict calls = 20.",
+                                            "baseline":  "frozen P2-A5B-R1 unpermuted locked predictions; do not recompute baseline",
+                                            "metric":  "same P2-A5 locked PAIR-MACRO TARGET-MACRO DEVELOPMENT-SCALE NRMSE",
+                                            "feature_importance_estimand":  "DeltaNRMSE_k = permuted primary NRMSE - frozen baseline primary NRMSE",
+                                            "pair_level_estimand":  "For each exact pair and feature, average pair-macro DeltaNRMSE across the 20 deterministic permutation repeats.",
+                                            "uncertainty":  {
+                                                                "unit":  "EXACT_PAIR",
+                                                                "bootstrap_replicates":  10000,
+                                                                "bootstrap_seed":  20260919,
+                                                                "interval":  "95% percentile",
+                                                                "row_iid_bootstrap":  "PROHIBITED"
+                                                            },
+                                            "classification":  {
+                                                                   "supported_dependency":  "95% exact-pair bootstrap CI lower bound for pair-macro mean DeltaNRMSE \u003e 0",
+                                                                   "inconclusive":  "95% CI includes 0",
+                                                                   "negative_or_redundant":  "95% CI upper bound \u003c 0"
+                                                               },
+                                            "rank_rule":  "Descending pair-macro mean DeltaNRMSE; ranking is descriptive and does not imply causal importance.",
+                                            "model_refit":  "PROHIBITED",
+                                            "feature_engineering_changes":  "PROHIBITED"
+                                        },
+    "native_importance_protocol":  {
+                                       "name":  "EXTRATREES_MEAN_DECREASE_IN_IMPURITY",
+                                       "source":  "frozen model.feature_importances_",
+                                       "prediction_calls":  0,
+                                       "role":  "SECONDARY DESCRIPTIVE DIAGNOSTIC ONLY",
+                                       "reason_not_primary":  "Impurity importance can favor predictors with greater split opportunity and does not quantify locked-cohort predictive damage.",
+                                       "comparison":  "Report rank concordance with group-preserving permutation ranking using Spearman rho; no significance claim.",
+                                       "ice_status":  "May be shown in native importance table, but must not be directly rank-equated to the P2-A6 physical counterfactual contrast."
+                                   },
+    "ensemble_dispersion_protocol":  {
+                                         "name":  "EXTRATREES_TREE_ENSEMBLE_DISPERSION_DIAGNOSTIC",
+                                         "scientific_role":  "UNCERTAINTY DIAGNOSTIC / EPISTEMIC-PROXY ONLY; NOT A CALIBRATED PREDICTION INTERVAL",
+                                         "cohort":  "exact 20,537-row locked validation cohort",
+                                         "tree_count":  256,
+                                         "target_space":  "standardized six-target model-output space using frozen P2-A4E development-only target scales",
+                                         "row_level_dispersion":  "u_ij = standard deviation across the 256 tree predictions for row i and target j",
+                                         "pair_target_dispersion":  "U_gj = RMS of u_ij across rows within exact pair g for target j",
+                                         "pair_target_error":  "E_gj = frozen P2-A5B-R1 NRMSE for exact pair g and target j",
+                                         "target_specific_association":  "For each of six targets, Spearman rho across 24 exact pairs between U_gj and E_gj",
+                                         "association_uncertainty":  {
+                                                                         "resampling_unit":  "EXACT_PAIR",
+                                                                         "bootstrap_replicates":  10000,
+                                                                         "bootstrap_seed":  20260919,
+                                                                         "interval":  "95% percentile"
+                                                                     },
+                                         "interpretation_rule":  {
+                                                                     "positive_association":  "95% bootstrap CI lower bound for Spearman rho \u003e 0",
+                                                                     "inconclusive":  "95% CI includes 0",
+                                                                     "inverse_association":  "95% CI upper bound \u003c 0"
+                                                                 },
+                                         "pooled_target_correlation":  "PROHIBITED as primary because targets are heterogeneous; six target-specific associations are primary diagnostics.",
+                                         "interval_coverage_claim":  "PROHIBITED",
+                                         "probabilistic_calibration_claim":  "PROHIBITED",
+                                         "gaussian_uncertainty_assumption":  "PROHIBITED",
+                                         "tree_independence_assumption":  "PROHIBITED"
+                                     },
+    "support_error_protocol":  {
+                                   "name":  "DEVELOPMENT_SUPPORT_DISTANCE_VS_LOCKED_ERROR",
+                                   "support_reference":  "frozen P2-A6A development-only clean and iced kNN clouds",
+                                   "row_support_distance":  "s_i = max(d_clean_i, d_iced_i), using the frozen 8-D standardized continuous state/control space and k=10",
+                                   "pair_support_distance":  "S_g = median s_i across rows within exact pair g",
+                                   "pair_error":  "pair-macro six-target NRMSE from P2-A5B-R1",
+                                   "association":  "Spearman rho across 24 exact pairs between S_g and pair-macro NRMSE",
+                                   "bootstrap":  {
+                                                     "unit":  "EXACT_PAIR",
+                                                     "replicates":  10000,
+                                                     "seed":  20260919,
+                                                     "interval":  "95% percentile"
+                                                 },
+                                   "interpretation":  "Positive association suggests degradation as the locked pair moves farther from development support; absence of association is not evidence of universal robustness.",
+                                   "no_threshold_changes":  "q90/q95/q99 support thresholds remain immutable"
+                               },
+    "claim_policy":  {
+                         "interpretability_scope":  "Predictive dependence of the frozen model within the locked dataset; not physical causation.",
+                         "feature_importance_scope":  "Continuous-feature permutation importance and native forest importance are model diagnostics, not aerodynamic derivative estimates.",
+                         "ice_status_scope":  "Physical interpretation of ice_status remains governed by P2-A6; generic permutation ranking does not replace the counterfactual common-support analysis.",
+                         "uncertainty_scope":  "Tree dispersion is an ensemble-disagreement diagnostic and epistemic proxy, not a calibrated uncertainty interval.",
+                         "support_scope":  "Support-distance association is a validity diagnostic, not a universal domain-of-applicability guarantee.",
+                         "prohibited_claims":  [
+                                                   "causal feature importance",
+                                                   "physical sensitivity derivative from permutation importance",
+                                                   "calibrated predictive uncertainty",
+                                                   "95% predictive interval from tree spread",
+                                                   "universal out-of-distribution detection",
+                                                   "post-hoc model retuning based on interpretability results",
+                                                   "reopening neural architecture search"
+                                               ],
+                         "manuscript_reporting":  [
+                                                      "primary continuous-feature permutation-importance ranking with exact-pair bootstrap intervals",
+                                                      "secondary native ExtraTrees importance and rank concordance",
+                                                      "six target-specific tree-dispersion/error associations",
+                                                      "support-distance/error association",
+                                                      "explicit separation of P2-A6 ice-status counterfactual physics evidence from generic feature importance"
+                                                  ]
+                     },
+    "execution_guardrails":  {
+                                 "model_training_runs":  0,
+                                 "model_refit_runs":  0,
+                                 "model_predict_calls":  0,
+                                 "permutation_results_computed":  0,
+                                 "uncertainty_results_computed":  0,
+                                 "support_error_results_computed":  0,
+                                 "source_mutation":  "NONE",
+                                 "model_mutation":  "NONE"
+                             },
+    "classification":  "PASS_P2_A7A_INTERPRETABILITY_UNCERTAINTY_PREANALYSIS_FREEZE",
+    "next_stage":  "P2-A7B execute frozen group-preserving permutation importance, native forest importance, tree-ensemble dispersion/error diagnostics, and support-distance/error diagnostics. No model training/refit or protocol changes."
+}

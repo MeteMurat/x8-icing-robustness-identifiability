@@ -1,0 +1,126 @@
+﻿{
+    "contract_name":  "NTNU_X8_ICING_P2_A7B_FROZEN_INTERPRETABILITY_UNCERTAINTY_EXECUTION",
+    "timestamp_local":  "2026-09-19T20:50:39.2002234+03:00",
+    "provenance":  {
+                       "parent_p2_a7a_sha256":  "CCC6A753C9E58DC622535201AAD2F68C6B4FEE6B0B85B57C72322CFD7EE1C9DB",
+                       "parent_p2_a6c_sha256":  "D4FFD48A51DB6D18E2C57A092938687CE61978DC7ECB50A4330E045096213605",
+                       "final_model_bundle_sha256":  "1ADC46017D144EE830A0A42D64272695AC89C03D680D3A9BFE1407639A8E7EBB"
+                   },
+    "execution":  {
+                      "locked_rows":  20537,
+                      "locked_exact_pairs":  24,
+                      "baseline_primary_nrmse":  0.53998900775024639,
+                      "permutation_features":  8,
+                      "permutation_repeats":  20,
+                      "permutation_model_predict_calls":  20,
+                      "tree_count":  256,
+                      "tree_estimator_predict_calls":  256,
+                      "surrogate_model_training_runs":  0,
+                      "surrogate_model_refit_runs":  0
+                  },
+    "interpretability_results":  {
+                                     "top_permutation_feature":  "alpha",
+                                     "top_feature_delta_nrmse":  0.20093386346372075,
+                                     "top_feature_ci_95":  [
+                                                               0.10582075361213704,
+                                                               0.30455974720772827
+                                                           ],
+                                     "supported_dependency_count":  8,
+                                     "inconclusive_count":  0,
+                                     "negative_or_redundant_count":  0,
+                                     "native_vs_permutation_spearman_rho":  0.92857142857142883,
+                                     "native_importance_role":  "SECONDARY_DESCRIPTIVE_ONLY",
+                                     "ice_status_generic_permutation":  "EXCLUDED"
+                                 },
+    "uncertainty_results":  {
+                                "positive_target_associations":  4,
+                                "inconclusive_target_associations":  2,
+                                "inverse_target_associations":  0,
+                                "calibrated_prediction_interval_claim":  "PROHIBITED"
+                            },
+    "support_error_result":  {
+                                 "spearman_rho":  0.81826086956521726,
+                                 "ci_95":  [
+                                               0.61310043668122272,
+                                               0.9119727991795914
+                                           ],
+                                 "classification":  "POSITIVE_ASSOCIATION",
+                                 "role":  "VALIDITY_DIAGNOSTIC_ONLY"
+                             },
+    "scientific_status":  {
+                              "execution_integrity":  "PASS",
+                              "terminal_claim_freeze":  "P2-A7C_REQUIRED",
+                              "causal_feature_importance":  "PROHIBITED",
+                              "physical_derivative_inference":  "PROHIBITED",
+                              "calibrated_uncertainty_claim":  "PROHIBITED",
+                              "universal_ood_claim":  "PROHIBITED"
+                          },
+    "guardrails":  {
+                       "model_training_runs":  0,
+                       "model_refit_runs":  0,
+                       "neural_reopening":  0,
+                       "counterfactual_protocol_changes":  0,
+                       "support_threshold_changes":  0,
+                       "source_mutation":  "NONE",
+                       "model_mutation":  "NONE"
+                   },
+    "artifacts":  [
+                      {
+                          "Artifact":  "A7B_ENGINE",
+                          "Path":  "E:\\İCİNG-PROJE\\_P2_ML\\P2_A7B_FROZEN_INTERPRETABILITY_UNCERTAINTY_EXECUTION_20260919_204208\\_p2_a7b_interpretability_uncertainty_execution.py",
+                          "SHA256":  "FD2BBF2C1C26548E5F38A1F32FEA49AF0AB0B46978E574021119F28041750289"
+                      },
+                      {
+                          "Artifact":  "PERMUTATION_REPEAT_SUMMARY",
+                          "Path":  "E:\\İCİNG-PROJE\\_P2_ML\\P2_A7B_FROZEN_INTERPRETABILITY_UNCERTAINTY_EXECUTION_20260919_204208\\P2_A7B_PERMUTATION_REPEAT_SUMMARY.csv",
+                          "SHA256":  "3E6F06A34A9528EF1CA9B8DD50A85C7DF6EF4866697EFAB0FB61B5A950CA288C"
+                      },
+                      {
+                          "Artifact":  "PERMUTATION_PAIR_FEATURE_DELTAS",
+                          "Path":  "E:\\İCİNG-PROJE\\_P2_ML\\P2_A7B_FROZEN_INTERPRETABILITY_UNCERTAINTY_EXECUTION_20260919_204208\\P2_A7B_PERMUTATION_PAIR_FEATURE_DELTAS.csv",
+                          "SHA256":  "9CADC4C23E8A0FF687100F8269C95583277720F24312011AD480D145C32A3CDC"
+                      },
+                      {
+                          "Artifact":  "PERMUTATION_IMPORTANCE",
+                          "Path":  "E:\\İCİNG-PROJE\\_P2_ML\\P2_A7B_FROZEN_INTERPRETABILITY_UNCERTAINTY_EXECUTION_20260919_204208\\P2_A7B_PERMUTATION_IMPORTANCE.csv",
+                          "SHA256":  "21E68B38AAF5351CC539EC278EB040101E024847329E3F1697E05D4EEAB28BB5"
+                      },
+                      {
+                          "Artifact":  "NATIVE_EXTRATREES_IMPORTANCE",
+                          "Path":  "E:\\İCİNG-PROJE\\_P2_ML\\P2_A7B_FROZEN_INTERPRETABILITY_UNCERTAINTY_EXECUTION_20260919_204208\\P2_A7B_NATIVE_EXTRATREES_IMPORTANCE.csv",
+                          "SHA256":  "BB101FA97546932DEF158EF111B44B9D5C9D99B56896246052A74E6BFE5EFAB5"
+                      },
+                      {
+                          "Artifact":  "NATIVE_PERMUTATION_CONCORDANCE",
+                          "Path":  "E:\\İCİNG-PROJE\\_P2_ML\\P2_A7B_FROZEN_INTERPRETABILITY_UNCERTAINTY_EXECUTION_20260919_204208\\P2_A7B_NATIVE_PERMUTATION_CONCORDANCE.json",
+                          "SHA256":  "83DCE4616B7426D3EEC2D304886C1E0234702AFED9F3FC802A364B725BEFB031"
+                      },
+                      {
+                          "Artifact":  "TREE_DISPERSION_PAIR_TARGET",
+                          "Path":  "E:\\İCİNG-PROJE\\_P2_ML\\P2_A7B_FROZEN_INTERPRETABILITY_UNCERTAINTY_EXECUTION_20260919_204208\\P2_A7B_TREE_DISPERSION_PAIR_TARGET.csv",
+                          "SHA256":  "A32C592F402E2B8B5617EAF28DEDDB232388F663DFD71425AC7A8E176B75F02A"
+                      },
+                      {
+                          "Artifact":  "TREE_DISPERSION_ERROR_ASSOCIATIONS",
+                          "Path":  "E:\\İCİNG-PROJE\\_P2_ML\\P2_A7B_FROZEN_INTERPRETABILITY_UNCERTAINTY_EXECUTION_20260919_204208\\P2_A7B_TREE_DISPERSION_ERROR_ASSOCIATIONS.csv",
+                          "SHA256":  "7D599030EC1552DC4DCC99CF62EA92AC4C7709A5EDE1F23786A7E59CFBDAECE9"
+                      },
+                      {
+                          "Artifact":  "SUPPORT_DISTANCE_PAIR_ERROR",
+                          "Path":  "E:\\İCİNG-PROJE\\_P2_ML\\P2_A7B_FROZEN_INTERPRETABILITY_UNCERTAINTY_EXECUTION_20260919_204208\\P2_A7B_SUPPORT_DISTANCE_PAIR_ERROR.csv",
+                          "SHA256":  "81C5847B9315A97B75A6F44A9C14A60491C43CEE62B80E4A3E655ADEA51235AE"
+                      },
+                      {
+                          "Artifact":  "SUPPORT_DISTANCE_ERROR_ASSOCIATION",
+                          "Path":  "E:\\İCİNG-PROJE\\_P2_ML\\P2_A7B_FROZEN_INTERPRETABILITY_UNCERTAINTY_EXECUTION_20260919_204208\\P2_A7B_SUPPORT_DISTANCE_ERROR_ASSOCIATION.json",
+                          "SHA256":  "7E5B4A2F91F62643196A6338199F8B9B80A2879D84CFFCC56E730002CD0DDD8A"
+                      },
+                      {
+                          "Artifact":  "INTERPRETABILITY_UNCERTAINTY_SUMMARY",
+                          "Path":  "E:\\İCİNG-PROJE\\_P2_ML\\P2_A7B_FROZEN_INTERPRETABILITY_UNCERTAINTY_EXECUTION_20260919_204208\\P2_A7B_INTERPRETABILITY_UNCERTAINTY_SUMMARY.json",
+                          "SHA256":  "F146F2F66BA81F58668E76F9B120ED56E8C2C8B8C87A6E99FEBC404B1B528D56"
+                      }
+                  ],
+    "classification":  "PASS_P2_A7B_FROZEN_INTERPRETABILITY_UNCERTAINTY_EXECUTION_INTEGRITY",
+    "next_stage":  "P2-A7C terminal interpretability/uncertainty adjudication and manuscript claim freeze from these frozen results only. No model or protocol changes."
+}

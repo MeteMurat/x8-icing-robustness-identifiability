@@ -1,0 +1,91 @@
+﻿{
+    "contract_name":  "NTNU_X8_ICING_P1_A8C_IDENTIFICATION_EMPIRICAL_BATTERY_POWER_EXECUTION",
+    "timestamp_local":  "2026-09-19T12:18:12.5388518+03:00",
+    "provenance":  {
+                       "source_bundle_sha256":  "18D12A3A0A6603800F5D6961CC006F8C9C50533B16FEBACC7DF9E37FCD7EE689",
+                       "parent_p1_a8b_preanalysis_sha256":  "C7B019A19D6E373D23F5F32E324BED3977A769B4779B7B3BDBAF9B2A2FCD0C3E",
+                       "parent_p1_a3b0_binding":  "E:\\İCİNG-PROJE\\_P1_AUDIT\\P1_A3B0_DERIVATIVE_IDENTIFIABILITY_20260918_145535\\P1_A3B0_BINDING.json",
+                       "source_mutation":  "NONE",
+                       "validation_battery_power_outcomes_opened":  false
+                   },
+    "scope":  {
+                  "exact_longitudinal_identification_pairs":  12,
+                  "represented_pair_names":  [
+                                                 "lon_3211_02_12_ID_1.csv",
+                                                 "lon_3211_02_12_ID_2.csv",
+                                                 "lon_3211_02_12_ID_3.csv",
+                                                 "lon_3211_15_6_ID_1.csv",
+                                                 "lon_3211_15_6_ID_2.csv",
+                                                 "lon_3211_15_6_ID_3.csv",
+                                                 "lon_db_03_12_ID_1.csv",
+                                                 "lon_db_03_12_ID_2.csv",
+                                                 "lon_db_03_12_ID_3.csv",
+                                                 "lon_db_23_6_ID_1.csv",
+                                                 "lon_db_23_6_ID_2.csv",
+                                                 "lon_db_23_6_ID_3.csv"
+                                             ],
+                  "represented_primary_pairs":  12,
+                  "validation_battery_power_outcomes_opened":  false
+              },
+    "support":  {
+                    "battery_power_finiteness_pass":  true,
+                    "global_battery_power_finiteness":  1.0,
+                    "global_finite_battery_rows":  9856,
+                    "global_state_eligible_rows":  9856,
+                    "minimum_pairs":  10,
+                    "minimum_rows_each_configuration_per_pair":  25,
+                    "primary_support_pass":  true
+                },
+    "integrity":  {
+                      "branch_errors":  {
+
+                                        },
+                      "execution_pass":  true,
+                      "relative_denominator_pass":  true,
+                      "required_fit_numerical_pass":  true,
+                      "sign_semantic_pass":  true
+                  },
+    "hypothesis":  {
+                       "all_required_positive":  true,
+                       "alternative":  "Delta P_batt,ref \u003e 0 W",
+                       "id":  "HE_B1",
+                       "one_sided_p":  3.6911957362677071E-07,
+                       "primary_delta_P_batt_ref_W":  35.46097758045846,
+                       "primary_jackknife_se_W":  3.545588560930876,
+                       "required_branch_positive":  {
+                                                        "BETA_AUG":  true,
+                                                        "EQUAL_PAIR":  true,
+                                                        "KINEMATIC_ENERGY_STATE_AUG":  true,
+                                                        "PRIMARY":  true
+                                                    }
+                   },
+    "reference":  {
+                      "P_batt_clean_ref_W":  169.81515262590946,
+                      "P_batt_iced_ref_W":  205.27613020636792,
+                      "RPS_common_pooled_reference":  533.4842114571856,
+                      "relative_penalty":  0.2088210447189977,
+                      "relative_penalty_jackknife_se":  0.023012272825550236,
+                      "throttle_common_pooled_reference":  0.5369936747392081
+                  },
+    "classification":  "BATTERY_POWER_SIGNAL_ROBUST_IDENTIFICATION",
+    "voltage_current_diagnostic":  {
+                                       "median_pvi_minus_battery_power_W":  0.0,
+                                       "median_pvi_over_battery_power":  1.0,
+                                       "n":  9856,
+                                       "pearson_r":  1.0,
+                                       "same_sign_fraction":  1.0
+                                   },
+    "scientific_boundaries":  {
+                                  "battery_power":  "empirical total battery power only",
+                                  "P_drag_batt":  "PROHIBITED",
+                                  "shaft_power":  "NOT CLAIMED",
+                                  "aerodynamic_drag_power_equivalence":  "NOT CLAIMED",
+                                  "mission_average_power":  "NOT CLAIMED",
+                                  "endurance":  "NOT AUTHORIZED",
+                                  "range":  "NOT AUTHORIZED",
+                                  "identification_validation_pooling":  "PROHIBITED",
+                                  "row_iid_inference":  "PROHIBITED"
+                              },
+    "gate_status":  "PASS_P1_A8C_IDENTIFICATION_EMPIRICAL_BATTERY_POWER_EXECUTION",
+    "next_stage":  "STOP FOR REVIEW; adjudicate identification classification before any ID\u003e=4 validation battery_power execution."
+}

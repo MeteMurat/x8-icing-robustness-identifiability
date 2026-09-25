@@ -1,0 +1,71 @@
+{
+  "development_rows": 23210,
+  "exact_pair_groups": 27,
+  "flight_ids": [
+    1,
+    2,
+    3
+  ],
+  "model_families": [
+    "OLS",
+    "RIDGE",
+    "POLY2_RIDGE",
+    "EXTRA_TREES"
+  ],
+  "total_model_fits": 183,
+  "outer_result_rows": 12,
+  "inner_result_rows": 171,
+  "pair_target_error_rows": 648,
+  "family_summary": [
+    {
+      "family": "EXTRA_TREES",
+      "outer_mean_primary_score": 0.5643904214600094,
+      "outer_sd_primary_score": 0.009003039844131403,
+      "outer_min_primary_score": 0.5539947153100475,
+      "outer_max_primary_score": 0.5696294651619791,
+      "outer_fold_count": 3,
+      "selected_configs": "ID1:ET_FULL_LEAF1|ID2:ET_FULL_LEAF1|ID3:ET_FULL_LEAF1",
+      "relative_improvement_vs_ridge": 0.22298807231407997,
+      "development_rank": 1
+    },
+    {
+      "family": "POLY2_RIDGE",
+      "outer_mean_primary_score": 0.6847553751996392,
+      "outer_sd_primary_score": 0.01928968559466228,
+      "outer_min_primary_score": 0.6627156903462441,
+      "outer_max_primary_score": 0.6985646958953312,
+      "outer_fold_count": 3,
+      "selected_configs": "ID1:POLY2_A_100|ID2:POLY2_A_100|ID3:POLY2_A_1",
+      "relative_improvement_vs_ridge": 0.05727830621082371,
+      "development_rank": 2
+    },
+    {
+      "family": "RIDGE",
+      "outer_mean_primary_score": 0.7263600484755294,
+      "outer_sd_primary_score": 0.018339230335494543,
+      "outer_min_primary_score": 0.7052590035943254,
+      "outer_max_primary_score": 0.7384554974481671,
+      "outer_fold_count": 3,
+      "selected_configs": "ID1:RIDGE_A_100|ID2:RIDGE_A_100|ID3:RIDGE_A_100",
+      "relative_improvement_vs_ridge": 0.0,
+      "development_rank": 3
+    },
+    {
+      "family": "OLS",
+      "outer_mean_primary_score": 0.7267250627689462,
+      "outer_sd_primary_score": 0.018595024662290786,
+      "outer_min_primary_score": 0.7052897251014403,
+      "outer_max_primary_score": 0.738524242814478,
+      "outer_fold_count": 3,
+      "selected_configs": "ID1:OLS_FIXED|ID2:OLS_FIXED|ID3:OLS_FIXED",
+      "relative_improvement_vs_ridge": -0.0005025252891908472,
+      "development_rank": 4
+    }
+  ],
+  "best_development_family": "EXTRA_TREES",
+  "best_development_score": 0.5643904214600094,
+  "ridge_reference_score": 0.7263600484755294,
+  "locked_validation_numeric_rows_read": 0,
+  "neural_network_runs": 0,
+  "elapsed_seconds": 230.81728672981262
+}

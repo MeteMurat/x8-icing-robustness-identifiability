@@ -1,0 +1,15 @@
+{
+  "continuous_features": [
+    "Va_EKF_CG",
+    "alpha",
+    "beta",
+    "p",
+    "q",
+    "r",
+    "aileron",
+    "elevator"
+  ],
+  "spearman_rho_native_vs_permutation": 0.9285714285714287,
+  "significance_test": "NOT_PERFORMED",
+  "interpretation": "DESCRIPTIVE_RANK_CONCORDANCE_ONLY"
+}

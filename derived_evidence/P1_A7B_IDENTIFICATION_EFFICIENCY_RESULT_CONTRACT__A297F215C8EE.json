@@ -1,0 +1,69 @@
+﻿{
+    "contract_name":  "NTNU_X8_ICING_P1_A7B_IDENTIFICATION_ABSOLUTE_LIFT_REFERENCE_EFFICIENCY",
+    "timestamp_local":  "2026-09-18T22:38:24.4032268+03:00",
+    "provenance":  {
+                       "source_bundle_sha256":  "18D12A3A0A6603800F5D6961CC006F8C9C50533B16FEBACC7DF9E37FCD7EE689",
+                       "parent_p1_a7a_preanalysis_sha256":  "DD5D92E37573F5435538766C29E20EF6FD5EE86F841E8F8EF70F7A65F3F5E537",
+                       "protocol_retuned":  false,
+                       "new_A7_validation_efficiency_outcomes_opened":  false,
+                       "source_mutation":  "NONE"
+                   },
+    "scope":  {
+                  "identification_only":  true,
+                  "new_A7_validation_efficiency_outcomes_opened":  false,
+                  "exact_longitudinal_pairs":  12,
+                  "represented_primary_pairs":  12
+              },
+    "support":  {
+                    "primary_support_pass":  true,
+                    "required_sensitivity_row_support_pass":  true,
+                    "required_sensitivity_row_support":  {
+                                                             "PRIMARY_W5":  true,
+                                                             "ETA1_W5":  true,
+                                                             "W7":  true
+                                                         },
+                    "minimum_pairs":  10,
+                    "minimum_rows_each_configuration_per_pair":  25
+                },
+    "integrity":  {
+                      "required_fit_numerical_pass":  true,
+                      "required_denominator_gate_pass":  true
+                  },
+    "HE1":  {
+                "alternative":  "delta_E_ref \u003e 0",
+                "relative_efficiency_degradation":  0.07539503715901219,
+                "jackknife_se":  0.014145893449156916,
+                "one_sided_p":  0.00012056887360306347
+            },
+    "absolute_lift":  {
+                          "CL_clean_ref":  0.27358123471208695,
+                          "CL_iced_ref":  0.29772990167856034,
+                          "delta_CL_ref":  0.024148666966473387,
+                          "delta_CL_jackknife_se":  0.0023393590691917275,
+                          "directional_confirmatory_claim":  "NONE"
+                      },
+    "required_directional_sensitivities":  {
+                                               "PRIMARY_W5":  true,
+                                               "ETA1_W5":  true,
+                                               "EQUAL_PAIR_W5":  true,
+                                               "BETA_AUG_W5":  true,
+                                               "W7":  true
+                                           },
+    "all_required_directional_sensitivities_positive":  true,
+    "identification_classification":  "EFFICIENCY_SIGNAL_ROBUST_IDENTIFICATION",
+    "branch_results_csv":  "E:\\İCİNG-PROJE\\_P1_AUDIT\\P1_A7B_IDENTIFICATION_ABSOLUTE_LIFT_EFFICIENCY_20260918_223752\\P1_A7B_EFFICIENCY_BRANCH_RESULTS.csv",
+    "coefficient_results_csv":  "E:\\İCİNG-PROJE\\_P1_AUDIT\\P1_A7B_IDENTIFICATION_ABSOLUTE_LIFT_EFFICIENCY_20260918_223752\\P1_A7B_REFERENCE_MODEL_COEFFICIENTS.csv",
+    "reconstruction_diagnostics_csv":  "E:\\İCİNG-PROJE\\_P1_AUDIT\\P1_A7B_IDENTIFICATION_ABSOLUTE_LIFT_EFFICIENCY_20260918_223752\\P1_A7B_RECONSTRUCTION_DIAGNOSTICS.csv",
+    "interpretation_policy":  [
+                                  "C_L,ref is absolute reference-state lift coefficient, not C_L,max.",
+                                  "Reference aerodynamic efficiency is C_L,ref/C_D,ref at the frozen common state, not maximum or trim-optimal L/D.",
+                                  "Delta C_L_ref is estimation-only with jackknife uncertainty; no one-sided confirmatory lift-loss claim is authorized.",
+                                  "HE1 concerns relative reference-efficiency degradation only.",
+                                  "Identification and future validation must remain separate.",
+                                  "All required sensitivity directions must remain positive for robust identification.",
+                                  "W9_STRESS is descriptive only.",
+                                  "Endurance, range, battery, shaft-power, electrical-power, and mission-energy consequences remain unauthorized."
+                              ],
+    "execution_gate_status":  "PASS_P1_A7B_IDENTIFICATION_ABSOLUTE_LIFT_REFERENCE_EFFICIENCY_EXECUTION",
+    "next_stage":  "STOP FOR REVIEW; if A7B is scientifically interpretable, execute the already-frozen ID\u003e=4 reference-efficiency validation protocol next."
+}

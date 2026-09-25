@@ -1,0 +1,41 @@
+{
+  "execution_integrity": "PASS",
+  "scientific_adjudication": "DEFER_TERMINAL_CLAIM_FREEZE_TO_P2_A6C",
+  "identity_rows": 20537,
+  "exact_pairs": 24,
+  "support_thresholds": {
+    "q90": 1.743944685367989,
+    "q95": 2.4461378687033077,
+    "q99": 4.228719709886236
+  },
+  "support_rows": {
+    "q90": 18679,
+    "q95": 19591,
+    "q99": 20364
+  },
+  "support_coverage": {
+    "q90": 0.9095291425232507,
+    "q95": 0.9539367970005356,
+    "q99": 0.991576179578322
+  },
+  "q95_supported_pairs": 24,
+  "counterfactual_query_states_predicted": 20364,
+  "stacked_model_prediction_rows": 40728,
+  "model_fit_calls": 0,
+  "model_refit_calls": 0,
+  "model_predict_calls": 1,
+  "primary_estimand": "PAIR-MACRO MEAN DeltaD_cf [N] ON Q95 BOTH-CONFIG COMMON SUPPORT",
+  "primary_DeltaD_cf_N": 1.0182576058394843,
+  "primary_ci_low_2p5_N": 0.9761162265725609,
+  "primary_ci_high_97p5_N": 1.0622615606903314,
+  "primary_positive_pair_means": 24,
+  "primary_positive_pair_fraction": 1.0,
+  "prospective_P1_drag_direction_result": "CONSISTENT_WITH_P1_POSITIVE_DRAG_DIRECTION",
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 20260919,
+  "causal_effect_claim": "PROHIBITED",
+  "derivative_consistency_claim": "NOT_TESTED",
+  "model_sha256": "1ADC46017D144EE830A0A42D64272695AC89C03D680D3A9BFE1407639A8E7EBB",
+  "support_reference_sha256": "A0A8AC5741F6C5D062E96C00F4A55D332DDDAE5EF6828C199F1578E7CD3DA751",
+  "max_abs_time_identity_difference": 0.0
+}

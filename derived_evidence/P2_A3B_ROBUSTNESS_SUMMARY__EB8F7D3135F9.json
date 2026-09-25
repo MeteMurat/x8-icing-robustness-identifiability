@@ -1,0 +1,32 @@
+{
+  "outer_fold_count": 3,
+  "pair_group_count": 27,
+  "target_count": 6,
+  "extra_trees_vs_ridge": {
+    "outer_folds_improved": 3,
+    "outer_folds_total": 3,
+    "outer_improvement_min": 0.2144804781128142,
+    "outer_improvement_max": 0.22873201448679237,
+    "outer_improvement_mean": 0.22286392408840172,
+    "pair_groups_improved": 27,
+    "pair_groups_total": 27,
+    "pair_improvement_fraction": 1.0,
+    "pair_improvement_median": 0.19692581964791575,
+    "pair_improvement_min": 0.07993855133399107,
+    "pair_improvement_max": 0.39290968008157884,
+    "targets_improved": 6,
+    "targets_total": 6,
+    "target_improvement_min": 0.18864870717479826,
+    "target_improvement_max": 0.2718683662901675
+  },
+  "selected_config_counts": {
+    "OLS": 1,
+    "RIDGE": 1,
+    "POLY2_RIDGE": 2,
+    "EXTRA_TREES": 1
+  },
+  "locked_validation_numeric_rows_read": 0,
+  "model_training_runs": 0,
+  "performance_metrics_newly_computed_from_predictions": 0,
+  "note": "This stage recomputes descriptive summaries only from already-frozen P2-A3 development error artifacts; it does not retrain models or open locked validation."
+}

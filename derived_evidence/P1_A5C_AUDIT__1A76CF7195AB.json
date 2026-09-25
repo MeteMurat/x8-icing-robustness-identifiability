@@ -1,0 +1,28 @@
+{
+  "scope": {
+    "validation_drag_outcomes_opened": true,
+    "exact_longitudinal_validation_pairs": 10,
+    "unmatched_longitudinal_validation_files": 3,
+    "represented_validation_pairs": 10
+  },
+  "support_pass": true,
+  "numerical_pass": true,
+  "primary_hypothesis": {
+    "id": "HD1",
+    "alternative": "Delta C_D_ref > 0",
+    "gamma0": 0.009384869695256351,
+    "jackknife_se": 0.0009575482943599383,
+    "one_sided_p": 2.114531929909428e-06
+  },
+  "required_directional_sensitivities": {
+    "PRIMARY_W5": true,
+    "ETA1_W5": true,
+    "EQUAL_PAIR_W5": true,
+    "BETA_AUG_W5": true,
+    "W7": true
+  },
+  "all_required_directions_positive": true,
+  "classification": "DRAG_CONFIRMED_STRONG",
+  "W9_is_descriptive_only": true,
+  "execution_pass": true
+}

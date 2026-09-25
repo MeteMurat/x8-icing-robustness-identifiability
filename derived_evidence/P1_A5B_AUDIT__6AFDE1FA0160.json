@@ -1,0 +1,35 @@
+{
+  "scope": {
+    "identification_only": true,
+    "validation_drag_outcomes_opened": false,
+    "exact_longitudinal_pairs": 12,
+    "represented_primary_pairs": 12
+  },
+  "support": {
+    "primary_support_pass": true,
+    "minimum_pairs": 10,
+    "minimum_rows_each_configuration_per_pair": 25
+  },
+  "integrity": {
+    "required_fit_numerical_pass": true
+  },
+  "primary_hypothesis": {
+    "id": "HD1",
+    "alternative": "Delta C_D_ref > 0",
+    "gamma0": 0.008118738888569834,
+    "jackknife_se": 0.0009069134164766361,
+    "one_sided_p": 1.1042771306291204e-06,
+    "significant_at_0p05": true
+  },
+  "required_directional_sensitivities": {
+    "PRIMARY_W5": true,
+    "ETA1_W5": true,
+    "EQUAL_PAIR_W5": true,
+    "BETA_AUG_W5": true,
+    "W7": true
+  },
+  "all_required_directional_sensitivities_positive": true,
+  "classification": "DRAG_SIGNAL_ROBUST_IDENTIFICATION",
+  "W9_is_descriptive_only": true,
+  "execution_pass": true
+}

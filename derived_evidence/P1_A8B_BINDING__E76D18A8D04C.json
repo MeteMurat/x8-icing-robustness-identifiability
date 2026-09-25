@@ -1,0 +1,23 @@
+﻿{
+    "status":  "PASS_P1_A8B_BATTERY_POWER_SEMANTIC_AUDIT_AND_PREANALYSIS_FREEZE",
+    "timestamp_local":  "2026-09-19T12:05:43.7870242+03:00",
+    "project_root":  "E:\\İCİNG-PROJE",
+    "dataset_root":  "E:\\İCİNG-PROJE",
+    "run_root":  "E:\\İCİNG-PROJE\\_P1_AUDIT\\P1_A8B_BATTERY_POWER_SEMANTIC_PREANALYSIS_FREEZE_20260919_120542",
+    "source_bundle_sha256":  "18D12A3A0A6603800F5D6961CC006F8C9C50533B16FEBACC7DF9E37FCD7EE689",
+    "source_mutation":  "NONE",
+    "parent_p1_a8a_binding":  "E:\\İCİNG-PROJE\\_P1_AUDIT\\P1_A8A_MISSION_IDENTIFIABILITY_SCOPE_FREEZE_20260918_225016\\P1_A8A_BINDING.json",
+    "parent_p1_a8a_identifiability_scope_sha256":  "143D18C964D4848ED23BF3652E9A23B1B68DA69DD63A1D846CF6BD8058A5B517",
+    "battery_power_preanalysis_contract":  {
+                                               "path":  "E:\\İCİNG-PROJE\\_P1_AUDIT\\P1_A8B_BATTERY_POWER_SEMANTIC_PREANALYSIS_FREEZE_20260919_120542\\P1_A8B_BATTERY_POWER_PREANALYSIS_CONTRACT.json",
+                                               "sha256":  "C7B019A19D6E373D23F5F32E324BED3977A769B4779B7B3BDBAF9B2A2FCD0C3E"
+                                           },
+    "readme_semantic_evidence":  "E:\\İCİNG-PROJE\\_P1_AUDIT\\P1_A8B_BATTERY_POWER_SEMANTIC_PREANALYSIS_FREEZE_20260919_120542\\P1_A8B_README_SEMANTIC_EVIDENCE.csv",
+    "required_channel_header_audit":  "E:\\İCİNG-PROJE\\_P1_AUDIT\\P1_A8B_BATTERY_POWER_SEMANTIC_PREANALYSIS_FREEZE_20260919_120542\\P1_A8B_REQUIRED_CHANNEL_HEADER_AUDIT.csv",
+    "numeric_battery_power_rows_read":  0,
+    "new_battery_power_outcomes_computed":  0,
+    "endurance_outcomes_computed":  0,
+    "range_outcomes_computed":  0,
+    "protocol_status":  "LOCKED",
+    "next_stage":  "P1-A8C IDENTIFICATION EMPIRICAL BATTERY-POWER EXECUTION"
+}

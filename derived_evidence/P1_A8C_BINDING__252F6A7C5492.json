@@ -1,0 +1,17 @@
+﻿{
+    "status":  "PASS_P1_A8C_IDENTIFICATION_EMPIRICAL_BATTERY_POWER_EXECUTION",
+    "timestamp_local":  "2026-09-19T12:18:12.6550321+03:00",
+    "project_root":  "E:\\İCİNG-PROJE",
+    "dataset_root":  "E:\\İCİNG-PROJE",
+    "run_root":  "E:\\İCİNG-PROJE\\_P1_AUDIT\\P1_A8C_IDENTIFICATION_EMPIRICAL_BATTERY_POWER_20260919_121723",
+    "source_bundle_sha256":  "18D12A3A0A6603800F5D6961CC006F8C9C50533B16FEBACC7DF9E37FCD7EE689",
+    "parent_p1_a8b_preanalysis_sha256":  "C7B019A19D6E373D23F5F32E324BED3977A769B4779B7B3BDBAF9B2A2FCD0C3E",
+    "identification_battery_power_result_contract":  {
+                                                         "path":  "E:\\İCİNG-PROJE\\_P1_AUDIT\\P1_A8C_IDENTIFICATION_EMPIRICAL_BATTERY_POWER_20260919_121723\\P1_A8C_IDENTIFICATION_BATTERY_POWER_RESULT_CONTRACT.json",
+                                                         "sha256":  "41D54A2DC55A8B5BFBBB6B045BC692D02BBA1A72964D8DCAE8F229BB6BF053B9"
+                                                     },
+    "classification":  "BATTERY_POWER_SIGNAL_ROBUST_IDENTIFICATION",
+    "validation_battery_power_outcomes_opened":  false,
+    "source_mutation":  "NONE",
+    "next_stage":  "STOP FOR REVIEW; adjudicate identification classification before any ID\u003e=4 validation battery_power execution."
+}

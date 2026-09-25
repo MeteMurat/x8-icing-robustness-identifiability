@@ -1,0 +1,109 @@
+﻿{
+    "contract_name":  "NTNU_X8_ICING_P1_A5D_FINAL_DRAG_VALIDATION_ADJUDICATION_AND_CLAIM_FREEZE",
+    "timestamp_local":  "2026-09-18T22:12:53.4323871+03:00",
+    "provenance":  {
+                       "source_bundle_sha256":  "18D12A3A0A6603800F5D6961CC006F8C9C50533B16FEBACC7DF9E37FCD7EE689",
+                       "parent_p1_a5b_identification_drag_sha256":  "A446ED228B14BE2BDBC820D705990FED56571E9180E55F5FEE55C545C5FFEA91",
+                       "parent_p1_a5c_validation_drag_sha256":  "FB4C15982F277F7A8D1877B80656C5F5379DC336FA766A5B1B09AD55E58D0BD6",
+                       "drag_protocol_retuned":  false,
+                       "raw_drag_rows_read_in_a5d":  0
+                   },
+    "final_drag_claim":  {
+                             "claim_id":  "HD1",
+                             "final_tier":  "TIER_1_VALIDATION_CONFIRMED",
+                             "identification_classification":  "DRAG_SIGNAL_ROBUST_IDENTIFICATION",
+                             "validation_classification":  "DRAG_CONFIRMED_STRONG",
+                             "identification":  {
+                                                    "delta_CD_ref":  0.0081187388885698344,
+                                                    "jackknife_se":  0.000906913416476636,
+                                                    "one_sided_p":  1.1042771306291204E-06,
+                                                    "all_required_sensitivity_directions_positive":  true
+                                                },
+                             "validation":  {
+                                                "delta_CD_ref":  0.0093848696952563513,
+                                                "jackknife_se":  0.00095754829435993835,
+                                                "one_sided_p":  2.1145319299094279E-06,
+                                                "all_required_sensitivity_directions_positive":  true
+                                            },
+                             "cross_stage":  {
+                                                 "validation_to_identification_gamma_ratio":  1.1559516599886062,
+                                                 "validation_minus_identification_fraction":  0.15595165998860616,
+                                                 "direction_replicated":  true,
+                                                 "magnitude_consistency_wording":  "Validation estimate is of the same order and same direction as identification; no equality-of-effect test is claimed."
+                                             },
+                             "propulsion_sensitivity":  {
+                                                            "identification_eta1_delta_CD_ref":  0.021359395783491966,
+                                                            "validation_eta1_delta_CD_ref":  0.022294281916823359,
+                                                            "identification_eta1_to_primary_ratio":  2.6308760605127128,
+                                                            "validation_eta1_to_primary_ratio":  2.3755558298366317,
+                                                            "direction_robust":  true,
+                                                            "magnitude_material":  true
+                                                        },
+                             "primary_manuscript_claim":  "Icing produced a positive reference drag-coefficient increment that was independently confirmed in the locked validation set and remained positive across all pre-specified required sensitivity branches.",
+                             "required_caveat":  "The direction of drag degradation is robust, but its absolute magnitude is strongly propulsion-efficiency dependent.",
+                             "prohibited_claims":  [
+                                                       "Do not claim that exactly 17.7% drag increase was validation-confirmed.",
+                                                       "Do not attribute the full drag increment solely to surface ice morphology.",
+                                                       "Do not treat eta_prop=1 and primary propulsion assumptions as interchangeable magnitudes.",
+                                                       "Do not infer L/D, endurance, range, or required-power penalties from HD1 alone.",
+                                                       "Do not pool identification and validation rows into one post-hoc effect estimate."
+                                                   ]
+                         },
+    "branch_comparison":  [
+                              {
+                                  "branch":  "PRIMARY_W5",
+                                  "identification_delta_CD_ref":  0.0081187388885698344,
+                                  "validation_delta_CD_ref":  0.0093848696952563513,
+                                  "role":  "PRIMARY"
+                              },
+                              {
+                                  "branch":  "ETA1_W5",
+                                  "identification_delta_CD_ref":  0.021359395783491966,
+                                  "validation_delta_CD_ref":  0.022294281916823359,
+                                  "role":  "REQUIRED_PROPULSION_SENSITIVITY"
+                              },
+                              {
+                                  "branch":  "EQUAL_PAIR_W5",
+                                  "identification_delta_CD_ref":  0.0081682303732351618,
+                                  "validation_delta_CD_ref":  0.0095589490952343262,
+                                  "role":  "REQUIRED_WEIGHTING_SENSITIVITY"
+                              },
+                              {
+                                  "branch":  "BETA_AUG_W5",
+                                  "identification_delta_CD_ref":  0.0081172042825396785,
+                                  "validation_delta_CD_ref":  0.0094274516428613665,
+                                  "role":  "REQUIRED_MODEL_SENSITIVITY"
+                              },
+                              {
+                                  "branch":  "W7",
+                                  "identification_delta_CD_ref":  0.0080392615483068711,
+                                  "validation_delta_CD_ref":  0.0093607280922968251,
+                                  "role":  "REQUIRED_DERIVATIVE_WINDOW_SENSITIVITY"
+                              },
+                              {
+                                  "branch":  "W9_STRESS",
+                                  "identification_delta_CD_ref":  0.0079534022666784068,
+                                  "validation_delta_CD_ref":  0.00932732314836178,
+                                  "role":  "DESCRIPTIVE_STRESS_TEST_ONLY"
+                              }
+                          ],
+    "manuscript_policy":  {
+                              "results_primary":  "Report identification and locked validation Delta C_D_ref separately, with their cluster-jackknife uncertainty and one-sided confirmatory p-values.",
+                              "results_sensitivity":  "Report eta_prop=1, equal-pair, beta-augmented, and W7 branches; W9 is descriptive stress-test evidence.",
+                              "discussion":  "Emphasize robust positive sign across all required branches and the large propulsion-model dependence of magnitude.",
+                              "abstract":  "A concise claim of independently validated drag degradation is authorized; avoid a single universal percentage.",
+                              "table":  "Use one compact identification-vs-validation drag table with primary and sensitivity branches.",
+                              "figure":  "Recommended later: forest-style plot of Delta C_D_ref across identification/validation and frozen sensitivity branches with zero reference line.",
+                              "relative_17p701_percent":  "Identification-stage descriptive value only; not validation-confirmed as a relative percentage.",
+                              "causal_attribution":  "Not authorized."
+                          },
+    "final_scientific_status":  {
+                                    "drag_direction":  "VALIDATION_CONFIRMED_POSITIVE",
+                                    "drag_magnitude":  "PROPULSION_MODEL_DEPENDENT",
+                                    "universal_relative_percentage":  "NOT_AUTHORIZED",
+                                    "causal_ice_shape_attribution":  "NOT_AUTHORIZED",
+                                    "performance_consequences":  "NOT_YET_AUTHORIZED"
+                                },
+    "gate_status":  "PASS_P1_A5D_FINAL_DRAG_VALIDATION_ADJUDICATION_AND_CLAIM_FREEZE",
+    "next_stage":  "STOP FOR REVIEW; next candidate is a pre-frozen aerodynamic-performance consequence stage (L/D / required-power implications), not direct manuscript insertion yet."
+}

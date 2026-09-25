@@ -1,0 +1,62 @@
+{
+  "execution_integrity": "PASS",
+  "scientific_adjudication": "DEFER_TERMINAL_CLAIM_FREEZE_TO_P2_A7C",
+  "locked_rows": 20537,
+  "locked_exact_pairs": 24,
+  "baseline_primary_nrmse": 0.5399890077502464,
+  "permutation": {
+    "features_ranked": [
+      "Va_EKF_CG",
+      "alpha",
+      "beta",
+      "p",
+      "q",
+      "r",
+      "aileron",
+      "elevator"
+    ],
+    "repeats": 20,
+    "seed": 20260919,
+    "model_predict_calls": 20,
+    "top_feature": "alpha",
+    "top_feature_delta_nrmse": 0.20093386346372077,
+    "top_feature_ci": [
+      0.10582075361213703,
+      0.30455974720772827
+    ],
+    "supported_dependency_count": 8,
+    "inconclusive_count": 0,
+    "negative_or_redundant_count": 0
+  },
+  "native_importance": {
+    "top_feature_all_9": "alpha",
+    "native_vs_permutation_spearman_rho_continuous_features": 0.9285714285714287,
+    "role": "SECONDARY_DESCRIPTIVE_ONLY"
+  },
+  "tree_dispersion": {
+    "tree_count": 256,
+    "tree_predict_calls": 256,
+    "positive_association_target_count": 4,
+    "inconclusive_target_count": 2,
+    "inverse_association_target_count": 0,
+    "calibrated_interval_claim": "PROHIBITED"
+  },
+  "support_distance_error": {
+    "spearman_rho": 0.8182608695652173,
+    "ci_low_2p5": 0.6131004366812227,
+    "ci_high_97p5": 0.9119727991795914,
+    "classification": "POSITIVE_ASSOCIATION",
+    "role": "VALIDITY_DIAGNOSTIC_ONLY"
+  },
+  "guardrails": {
+    "surrogate_model_fit_calls": 0,
+    "surrogate_model_refit_calls": 0,
+    "generic_ice_status_permutation": "EXCLUDED",
+    "new_counterfactual_icing_analysis": "NONE",
+    "causal_feature_importance_claim": "PROHIBITED",
+    "calibrated_predictive_interval_claim": "PROHIBITED",
+    "max_abs_time_identity_difference": 0.0
+  },
+  "model_sha256": "1ADC46017D144EE830A0A42D64272695AC89C03D680D3A9BFE1407639A8E7EBB",
+  "support_reference_sha256": "A0A8AC5741F6C5D062E96C00F4A55D332DDDAE5EF6828C199F1578E7CD3DA751"
+}

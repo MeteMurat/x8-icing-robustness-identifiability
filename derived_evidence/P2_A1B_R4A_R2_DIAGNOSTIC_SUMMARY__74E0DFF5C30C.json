@@ -1,0 +1,16 @@
+﻿{
+    "status":  "DIAGNOSTIC_P2_A1B_R4A_R2_EXACT_SOURCE_CONTEXT_RECOVERED",
+    "timestamp_local":  "2026-09-19T14:01:42.3433849+03:00",
+    "producer":  "E:\\İCİNG-PROJE\\_P2_ML\\P2_A1B_R4_PROSPECTIVE_REMATERIALIZATION_CONTRACT_20260919_135220\\FROZEN_PRODUCER__p1_a1_independent_reconstruction.py",
+    "producer_sha256":  "71ECE4A7F1839149D60A6EC5D0B6191AE2CAF1107C405E7E693AB0BF37C7FC9B",
+    "prior_hold":  "HOLD_P2_A1B_R4A_R1_FROZEN_PRODUCER_SEMANTICS_UNRESOLVED",
+    "target_token_occurrences":  3,
+    "collapsed_physics_context_blocks":  12,
+    "collapsed_output_context_blocks":  6,
+    "numbered_source":  "E:\\İCİNG-PROJE\\_P2_ML\\P2_A1B_R4A_R2_EXACT_SOURCE_CONTEXT_20260919_140141\\FROZEN_PRODUCER_NUMBERED_SOURCE.txt",
+    "numeric_values_read":  0,
+    "numeric_values_written":  0,
+    "model_training_runs":  0,
+    "source_mutation":  "NONE",
+    "next":  "STOP FOR HUMAN/SCIENTIFIC REVIEW OF EXACT SOURCE CONTEXT. DO NOT FREEZE TARGETS YET."
+}

@@ -1,0 +1,118 @@
+﻿{
+    "contract_name":  "NTNU_X8_ICING_P1_A5C_LOCKED_DRAG_VALIDATION",
+    "timestamp_local":  "2026-09-18T22:10:09.5443382+03:00",
+    "provenance":  {
+                       "source_bundle_sha256":  "18D12A3A0A6603800F5D6961CC006F8C9C50533B16FEBACC7DF9E37FCD7EE689",
+                       "parent_p1_a5a_preanalysis_sha256":  "A42203F238BC2100FEA30E3632C603E517FDC565A47FDA4CC4E6C5E3134126EC",
+                       "parent_p1_a5b_identification_drag_sha256":  "A446ED228B14BE2BDBC820D705990FED56571E9180E55F5FEE55C545C5FFEA91",
+                       "drag_protocol_retuned":  false,
+                       "validation_drag_outcomes_opened":  true
+                   },
+    "scope":  {
+                  "exact_longitudinal_validation_pairs":  10,
+                  "unmatched_longitudinal_validation_files":  3,
+                  "represented_validation_pairs":  10
+              },
+    "primary_hypothesis":  {
+                               "id":  "HD1",
+                               "alternative":  "Delta C_D_ref \u003e 0",
+                               "gamma0":  0.009384869695256351,
+                               "jackknife_se":  0.0009575482943599383,
+                               "one_sided_p":  2.1145319299094279E-06
+                           },
+    "required_directional_sensitivities":  {
+                                               "PRIMARY_W5":  true,
+                                               "ETA1_W5":  true,
+                                               "EQUAL_PAIR_W5":  true,
+                                               "BETA_AUG_W5":  true,
+                                               "W7":  true
+                                           },
+    "all_required_directions_positive":  true,
+    "validation_classification":  "DRAG_CONFIRMED_STRONG",
+    "branch_results":  [
+                           {
+                               "branch":  "PRIMARY_W5",
+                               "pairs":  10,
+                               "rank":  11,
+                               "required_rank":  11,
+                               "condition_number":  4.8319910061045652,
+                               "largest_pair_fraction":  0.15132949393456685,
+                               "gamma0_delta_CD_ref":  0.0093848696952563513,
+                               "gamma0_jackknife_se":  0.00095754829435993835,
+                               "gamma0_loo_min":  0.0086666010132201137,
+                               "gamma0_loo_max":  0.0098765887445915364
+                           },
+                           {
+                               "branch":  "EQUAL_PAIR_W5",
+                               "pairs":  10,
+                               "rank":  11,
+                               "required_rank":  11,
+                               "condition_number":  5.1553463574279252,
+                               "largest_pair_fraction":  0.15132949393456685,
+                               "gamma0_delta_CD_ref":  0.0095589490952343262,
+                               "gamma0_jackknife_se":  0.0010544427249199388,
+                               "gamma0_loo_min":  0.00866515875462342,
+                               "gamma0_loo_max":  0.0099887957752853515
+                           },
+                           {
+                               "branch":  "BETA_AUG_W5",
+                               "pairs":  10,
+                               "rank":  12,
+                               "required_rank":  12,
+                               "condition_number":  4.8563224575755068,
+                               "largest_pair_fraction":  0.15132949393456685,
+                               "gamma0_delta_CD_ref":  0.0094274516428613665,
+                               "gamma0_jackknife_se":  0.00096644748933709954,
+                               "gamma0_loo_min":  0.00864706507825783,
+                               "gamma0_loo_max":  0.00991710970432294
+                           },
+                           {
+                               "branch":  "ETA1_W5",
+                               "pairs":  10,
+                               "rank":  11,
+                               "required_rank":  11,
+                               "condition_number":  4.8319910061045652,
+                               "largest_pair_fraction":  0.15132949393456685,
+                               "gamma0_delta_CD_ref":  0.022294281916823359,
+                               "gamma0_jackknife_se":  0.0011609657714387591,
+                               "gamma0_loo_min":  0.021483474567407537,
+                               "gamma0_loo_max":  0.022827884463606059
+                           },
+                           {
+                               "branch":  "W7",
+                               "pairs":  10,
+                               "rank":  11,
+                               "required_rank":  11,
+                               "condition_number":  4.8300842320307389,
+                               "largest_pair_fraction":  0.15158231744859008,
+                               "gamma0_delta_CD_ref":  0.0093607280922968251,
+                               "gamma0_jackknife_se":  0.00096528123633168276,
+                               "gamma0_loo_min":  0.0086380693354722714,
+                               "gamma0_loo_max":  0.0098431729206462076
+                           },
+                           {
+                               "branch":  "W9_STRESS",
+                               "pairs":  10,
+                               "rank":  11,
+                               "required_rank":  11,
+                               "condition_number":  4.8264248429312806,
+                               "largest_pair_fraction":  0.15183764385595841,
+                               "gamma0_delta_CD_ref":  0.00932732314836178,
+                               "gamma0_jackknife_se":  0.00097628166642412559,
+                               "gamma0_loo_min":  0.00860117135912691,
+                               "gamma0_loo_max":  0.0098016291561369151
+                           }
+                       ],
+    "interpretation_policy":  [
+                                  "DRAG_CONFIRMED_STRONG requires positive primary Delta C_D_ref, positive required sensitivity directions, and one-sided p\u003c=0.05.",
+                                  "DRAG_DIRECTIONALLY_REPLICATED means positive stable direction but p\u003e0.05.",
+                                  "DRAG_MODEL_OR_PROPULSION_SENSITIVE_VALIDATION means primary positive but at least one frozen required sensitivity branch is nonpositive.",
+                                  "DRAG_NOT_REPLICATED means primary validation Delta C_D_ref is nonpositive.",
+                                  "W9 remains descriptive only.",
+                                  "Magnitude sensitivity to eta_prop must be reported separately even when the direction is robust.",
+                                  "No causal attribution solely to ice morphology is authorized.",
+                                  "No L/D, endurance, range, or power-penalty claim is authorized by this stage alone."
+                              ],
+    "execution_gate_status":  "PASS_P1_A5C_LOCKED_DRAG_VALIDATION_EXECUTION",
+    "next_stage":  "P1-A5D DRAG VALIDATION ADJUDICATION / FINAL DRAG CLAIM FREEZE"
+}

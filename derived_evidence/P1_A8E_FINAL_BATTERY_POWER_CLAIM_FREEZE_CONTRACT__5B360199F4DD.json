@@ -1,0 +1,56 @@
+﻿{
+    "contract_name":  "NTNU_X8_ICING_P1_A8E_FINAL_BATTERY_POWER_VALIDATION_ADJUDICATION_AND_CLAIM_FREEZE",
+    "timestamp_local":  "2026-09-19T12:47:48.0327546+03:00",
+    "provenance":  {
+                       "parent_p1_a8c_result_sha256":  "41D54A2DC55A8B5BFBBB6B045BC692D02BBA1A72964D8DCAE8F229BB6BF053B9",
+                       "parent_p1_a8d_validation_sha256":  "A64E632EC0450820652CA979D1E52B732A441EC5CF36009DE1CCDD24179601D9",
+                       "parent_p1_a8c_run_root":  "E:\\İCİNG-PROJE\\_P1_AUDIT\\P1_A8C_IDENTIFICATION_EMPIRICAL_BATTERY_POWER_20260919_121723",
+                       "parent_p1_a8d_run_root":  "E:\\İCİNG-PROJE\\_P1_AUDIT\\P1_A8D_LOCKED_VALIDATION_EMPIRICAL_BATTERY_POWER_20260919_122719",
+                       "source_mutation":  "NONE",
+                       "new_raw_outcomes_computed":  0,
+                       "identification_validation_pooling":  false
+                   },
+    "final_classification":  "TIER_1_VALIDATION_CONFIRMED_REFERENCE_STATE_ELECTRICAL_POWER_PENALTY",
+    "identification":  {
+                           "classification":  "BATTERY_POWER_SIGNAL_ROBUST_IDENTIFICATION",
+                           "delta_P_batt_ref_W":  35.460977580458461,
+                           "pair_jackknife_se_W":  3.5455885609308759,
+                           "one_sided_p":  3.6911957362677071E-07,
+                           "P_batt_clean_ref_W":  169.81515262590946,
+                           "P_batt_iced_ref_W":  205.27613020636792,
+                           "relative_reference_penalty":  0.20882104471899771
+                       },
+    "locked_validation":  {
+                              "classification":  "CONFIRMED_STRONG",
+                              "delta_P_batt_ref_W":  31.36547704507997,
+                              "pair_jackknife_se_W":  4.7217076586544664,
+                              "one_sided_p":  4.7255960083649552E-05,
+                              "P_batt_clean_ref_W":  168.85926935100383,
+                              "P_batt_iced_ref_W":  200.22474639608379,
+                              "relative_reference_penalty":  0.18574921688119639,
+                              "all_required_branch_directions_positive":  true
+                          },
+    "frozen_claims":  {
+                          "primary":  "Under the frozen common aerodynamic reference-state protocol, icing is associated with a positive empirical total-battery electrical-power penalty. The identification analysis estimated Delta P_batt,ref = 35.46 W (20.88%; pair-jackknife SE 3.55 W; one-sided p=3.691E-7). Under the prospectively locked validation protocol, the positive effect was independently confirmed with Delta P_batt,ref = 31.37 W (18.57%; pair-jackknife SE 4.72 W; one-sided p=4.726E-5). Identification and validation effects are reported separately and are not pooled.",
+                          "conservative":  "Across the identification and prospectively locked validation analyses, icing produced a reproducible positive increase in empirical total battery electrical power at the frozen common aerodynamic reference state. The identification estimate was 35.46 W (20.88%), while the independent validation estimate was 31.37 W (18.57%). No equality or pooling of the two effect magnitudes is claimed.",
+                          "magnitude_equality_claim":  "PROHIBITED",
+                          "pooled_effect_claim":  "PROHIBITED"
+                      },
+    "boundaries":  {
+                       "channel":  "battery_power [W] = empirical total battery electrical power",
+                       "electrical_identity":  "battery_power equals voltage*current over the analyzed samples; this is a semantic identity, not an independent redundant validation observable",
+                       "P_drag_batt":  "PROHIBITED",
+                       "shaft_power":  "NOT CLAIMED",
+                       "propulsive_power":  "NOT CLAIMED",
+                       "aerodynamic_drag_power_equivalence":  "NOT CLAIMED",
+                       "mission_average_power":  "NOT CLAIMED",
+                       "endurance":  "NOT AUTHORIZED",
+                       "range":  "NOT AUTHORIZED",
+                       "identification_validation_pooling":  "PROHIBITED",
+                       "magnitude_equivalence_test":  "NOT PRE-SPECIFIED; DO NOT CLAIM EQUALITY",
+                       "row_iid_inference":  "PROHIBITED",
+                       "causal_claim":  "NOT CLAIMED"
+                   },
+    "gate_status":  "PASS_P1_A8E_FINAL_BATTERY_POWER_VALIDATION_ADJUDICATION_AND_CLAIM_FREEZE",
+    "next_stage":  "P1-A8 BATTERY-POWER BRANCH CLOSED. Preserve identification and validation as separate estimates in manuscript tables/text. Do not derive endurance/range or pool effects."
+}

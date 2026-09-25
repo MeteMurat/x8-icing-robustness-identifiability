@@ -1,0 +1,22 @@
+﻿{
+    "status":  "PASS_P1_A5D_FINAL_DRAG_VALIDATION_ADJUDICATION_AND_CLAIM_FREEZE",
+    "timestamp_local":  "2026-09-18T22:12:53.5833590+03:00",
+    "project_root":  "E:\\İCİNG-PROJE",
+    "dataset_root":  "E:\\İCİNG-PROJE",
+    "run_root":  "E:\\İCİNG-PROJE\\_P1_AUDIT\\P1_A5D_FINAL_DRAG_CLAIM_FREEZE_20260918_221253",
+    "source_bundle_sha256":  "18D12A3A0A6603800F5D6961CC006F8C9C50533B16FEBACC7DF9E37FCD7EE689",
+    "source_mutation":  "NONE",
+    "parent_p1_a5b_binding":  "E:\\İCİNG-PROJE\\_P1_AUDIT\\P1_A5B_IDENTIFICATION_DRAG_FIT_20260918_214143\\P1_A5B_BINDING.json",
+    "parent_p1_a5b_identification_drag_sha256":  "A446ED228B14BE2BDBC820D705990FED56571E9180E55F5FEE55C545C5FFEA91",
+    "parent_p1_a5c_binding":  "E:\\İCİNG-PROJE\\_P1_AUDIT\\P1_A5C_LOCKED_DRAG_VALIDATION_20260918_221001\\P1_A5C_BINDING.json",
+    "parent_p1_a5c_validation_drag_sha256":  "FB4C15982F277F7A8D1877B80656C5F5379DC336FA766A5B1B09AD55E58D0BD6",
+    "final_drag_claim_freeze_contract":  {
+                                             "path":  "E:\\İCİNG-PROJE\\_P1_AUDIT\\P1_A5D_FINAL_DRAG_CLAIM_FREEZE_20260918_221253\\P1_A5D_FINAL_DRAG_CLAIM_FREEZE_CONTRACT.json",
+                                             "sha256":  "A04BE0A154F9CAF815C4F1A4AC4E8E24A42FF8F0069468A79C57AE1BE950433C"
+                                         },
+    "branch_comparison":  "E:\\İCİNG-PROJE\\_P1_AUDIT\\P1_A5D_FINAL_DRAG_CLAIM_FREEZE_20260918_221253\\P1_A5D_DRAG_BRANCH_COMPARISON.csv",
+    "manuscript_drag_claim_hierarchy":  "E:\\İCİNG-PROJE\\_P1_AUDIT\\P1_A5D_FINAL_DRAG_CLAIM_FREEZE_20260918_221253\\P1_A5D_MANUSCRIPT_DRAG_CLAIM_HIERARCHY.txt",
+    "raw_drag_rows_read_in_a5d":  0,
+    "drag_protocol_retuned":  false,
+    "next_stage":  "STOP FOR REVIEW; performance-consequence pre-freeze is the next candidate."
+}

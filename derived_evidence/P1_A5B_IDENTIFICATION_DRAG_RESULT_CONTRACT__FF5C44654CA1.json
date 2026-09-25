@@ -1,0 +1,136 @@
+﻿{
+    "contract_name":  "NTNU_X8_ICING_P1_A5B_IDENTIFICATION_DRAG_FIT_AND_SENSITIVITY",
+    "timestamp_local":  "2026-09-18T21:41:54.6804837+03:00",
+    "provenance":  {
+                       "source_bundle_sha256":  "18D12A3A0A6603800F5D6961CC006F8C9C50533B16FEBACC7DF9E37FCD7EE689",
+                       "parent_p1_a5a_preanalysis_sha256":  "A42203F238BC2100FEA30E3632C603E517FDC565A47FDA4CC4E6C5E3134126EC",
+                       "drag_protocol_retuned":  false,
+                       "validation_drag_outcomes_opened":  false
+                   },
+    "scope":  {
+                  "identification_ids":  "1-3 only",
+                  "exact_longitudinal_pairs":  12,
+                  "represented_primary_pairs":  12
+              },
+    "primary_hypothesis":  {
+                               "id":  "HD1",
+                               "alternative":  "Delta C_D_ref \u003e 0",
+                               "gamma0":  0.008118738888569834,
+                               "jackknife_se":  0.0009069134164766361,
+                               "one_sided_p":  1.1042771306291204E-06,
+                               "significant_at_0p05":  true
+                           },
+    "required_directional_sensitivities":  {
+                                               "PRIMARY_W5":  true,
+                                               "ETA1_W5":  true,
+                                               "EQUAL_PAIR_W5":  true,
+                                               "BETA_AUG_W5":  true,
+                                               "W7":  true
+                                           },
+    "all_required_directional_sensitivities_positive":  true,
+    "identification_classification":  "DRAG_SIGNAL_ROBUST_IDENTIFICATION",
+    "branch_results":  [
+                           {
+                               "branch":  "PRIMARY_W5",
+                               "pairs":  12,
+                               "rank":  11,
+                               "required_rank":  11,
+                               "condition_number":  5.1187591321187664,
+                               "largest_pair_fraction":  0.12305327868852459,
+                               "gamma0_delta_CD_ref":  0.0081187388885698344,
+                               "gamma0_jackknife_se":  0.00090691341647663613,
+                               "gamma0_loo_min":  0.007531182956616202,
+                               "gamma0_loo_max":  0.008674500392613041,
+                               "mean_clean_reference_CD":  0.045866147378907547,
+                               "relative_reference_increment":  0.17700939260277607,
+                               "average_model_implied_delta_CD":  0.0081446811502578157
+                           },
+                           {
+                               "branch":  "EQUAL_PAIR_W5",
+                               "pairs":  12,
+                               "rank":  11,
+                               "required_rank":  11,
+                               "condition_number":  5.272106789565794,
+                               "largest_pair_fraction":  0.12305327868852459,
+                               "gamma0_delta_CD_ref":  0.0081682303732351618,
+                               "gamma0_jackknife_se":  0.00087348445604589864,
+                               "gamma0_loo_min":  0.0076725580313750756,
+                               "gamma0_loo_max":  0.008659548024280447,
+                               "mean_clean_reference_CD":  0.045874450536875742,
+                               "relative_reference_increment":  0.17805620073136805,
+                               "average_model_implied_delta_CD":  0.0082088208842273722
+                           },
+                           {
+                               "branch":  "BETA_AUG_W5",
+                               "pairs":  12,
+                               "rank":  12,
+                               "required_rank":  12,
+                               "condition_number":  5.1459829457759314,
+                               "largest_pair_fraction":  0.12305327868852459,
+                               "gamma0_delta_CD_ref":  0.0081172042825396785,
+                               "gamma0_jackknife_se":  0.000896253577047953,
+                               "gamma0_loo_min":  0.00754308186028725,
+                               "gamma0_loo_max":  0.0086325918411050175,
+                               "mean_clean_reference_CD":  0.045873499988575227,
+                               "relative_reference_increment":  0.17694756852128712,
+                               "average_model_implied_delta_CD":  0.0081436835007698948
+                           },
+                           {
+                               "branch":  "ETA1_W5",
+                               "pairs":  12,
+                               "rank":  11,
+                               "required_rank":  11,
+                               "condition_number":  5.1187591321187664,
+                               "largest_pair_fraction":  0.12305327868852459,
+                               "gamma0_delta_CD_ref":  0.021359395783491966,
+                               "gamma0_jackknife_se":  0.00094466980911185714,
+                               "gamma0_loo_min":  0.020827734082567953,
+                               "gamma0_loo_max":  0.021987138161292986,
+                               "mean_clean_reference_CD":  0.045904174829419921,
+                               "relative_reference_increment":  0.46530399169277209,
+                               "average_model_implied_delta_CD":  0.020644843372459122
+                           },
+                           {
+                               "branch":  "W7",
+                               "pairs":  12,
+                               "rank":  11,
+                               "required_rank":  11,
+                               "condition_number":  5.115518506835774,
+                               "largest_pair_fraction":  0.1232495881383855,
+                               "gamma0_delta_CD_ref":  0.0080392615483068711,
+                               "gamma0_jackknife_se":  0.0009136392707033502,
+                               "gamma0_loo_min":  0.0074400670075890178,
+                               "gamma0_loo_max":  0.00857806997220635,
+                               "mean_clean_reference_CD":  0.0458564059022333,
+                               "relative_reference_increment":  0.17531381690590242,
+                               "average_model_implied_delta_CD":  0.0080969084865259965
+                           },
+                           {
+                               "branch":  "W9_STRESS",
+                               "pairs":  12,
+                               "rank":  11,
+                               "required_rank":  11,
+                               "condition_number":  5.11331747785941,
+                               "largest_pair_fraction":  0.12344784768211921,
+                               "gamma0_delta_CD_ref":  0.0079534022666784068,
+                               "gamma0_jackknife_se":  0.0009182493350818994,
+                               "gamma0_loo_min":  0.0073445880267608366,
+                               "gamma0_loo_max":  0.008474424603102642,
+                               "mean_clean_reference_CD":  0.045846346143784043,
+                               "relative_reference_increment":  0.17347952313876486,
+                               "average_model_implied_delta_CD":  0.00803223202375021
+                           }
+                       ],
+    "interpretation_policy":  [
+                                  "Primary quantity is Delta C_D at the pre-frozen reference operating point.",
+                                  "Configuration-specific propulsion efficiency is primary; eta_prop=1 is a required sensitivity branch.",
+                                  "Equal-pair weighting, beta augmentation, and W7 are required directional sensitivity branches.",
+                                  "W9 remains a descriptive long-window stress test and cannot overturn the pre-frozen gate by itself.",
+                                  "Source CD is diagnostic only and is not the primary aerodynamic outcome.",
+                                  "Validation drag outcomes remain unopened.",
+                                  "No causal attribution of the full drag difference solely to surface ice morphology is authorized.",
+                                  "No L/D, endurance, range, or power-penalty claim is authorized until a later consequence stage."
+                              ],
+    "execution_gate_status":  "PASS_P1_A5B_IDENTIFICATION_DRAG_FIT_AND_SENSITIVITY_EXECUTION",
+    "next_stage":  "STOP FOR REVIEW. If HD1 is scientifically interpretable under the frozen sensitivity classification, execute the already-frozen ID\u003e=4 drag validation protocol next."
+}

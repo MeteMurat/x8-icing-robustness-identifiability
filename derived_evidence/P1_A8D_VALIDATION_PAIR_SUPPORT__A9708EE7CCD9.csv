@@ -1,0 +1,11 @@
+﻿file_name,clean_source_rows,clean_state_envelope_rows,clean_finite_battery_rows,clean_battery_finiteness,iced_source_rows,iced_state_envelope_rows,iced_finite_battery_rows,iced_battery_finiteness,represented_primary
+lon_3211_02_12_ID_4.csv,317,276,276,1.0,316,268,268,1.0,True
+lon_3211_02_12_ID_5.csv,489,442,442,1.0,283,237,237,1.0,True
+lon_3211_15_6_ID_4.csv,686,589,589,1.0,508,343,343,1.0,True
+lon_3211_15_6_ID_5.csv,597,432,432,1.0,660,485,485,1.0,True
+lon_db_03_12_ID_4.csv,276,250,250,1.0,325,297,297,1.0,True
+lon_db_03_12_ID_5.csv,336,311,311,1.0,294,267,267,1.0,True
+lon_db_03_12_ID_6.csv,416,389,389,1.0,327,296,296,1.0,True
+lon_db_23_6_ID_4.csv,571,513,513,1.0,594,528,528,1.0,True
+lon_db_23_6_ID_5.csv,706,646,646,1.0,667,597,597,1.0,True
+lon_db_23_6_ID_6.csv,560,504,504,1.0,630,570,570,1.0,True

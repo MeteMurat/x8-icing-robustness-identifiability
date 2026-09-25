@@ -1,0 +1,11 @@
+{
+  "spearman_rho": 0.8182608695652173,
+  "ci_low_2p5": 0.6131004366812227,
+  "ci_high_97p5": 0.9119727991795914,
+  "classification": "POSITIVE_ASSOCIATION",
+  "exact_pairs": 24,
+  "finite_bootstrap_replicates": 10000,
+  "bootstrap_replicates_requested": 10000,
+  "bootstrap_seed": 20261819,
+  "interpretation": "VALIDITY_DIAGNOSTIC_ONLY_NOT_UNIVERSAL_DOMAIN_GUARANTEE"
+}

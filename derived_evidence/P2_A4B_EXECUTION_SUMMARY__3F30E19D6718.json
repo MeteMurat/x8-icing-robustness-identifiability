@@ -1,0 +1,52 @@
+{
+  "development_rows": 23210,
+  "exact_pair_groups": 27,
+  "neural_configurations": 6,
+  "neural_training_runs": 117,
+  "inner_result_rows": 108,
+  "outer_seed_result_rows": 9,
+  "outer_aggregate_result_rows": 3,
+  "prediction_rows": 23210,
+  "selected_configs": [
+    {
+      "outer_hold_id": 1,
+      "selected_config_id": "MLP_128_128_64_LR_3e-4",
+      "selected_inner_mean_score": 0.6804157294319028,
+      "parameter_count": 26438,
+      "runner_up_config_id": "MLP_128_64_LR_1e-3",
+      "runner_up_inner_mean_score": 0.6895620308740953,
+      "selection_margin": 0.009146301442192528
+    },
+    {
+      "outer_hold_id": 2,
+      "selected_config_id": "MLP_128_64_LR_1e-3",
+      "selected_inner_mean_score": 0.6537777677623207,
+      "parameter_count": 9926,
+      "runner_up_config_id": "MLP_128_128_64_LR_3e-4",
+      "runner_up_inner_mean_score": 0.6543255701338974,
+      "selection_margin": 0.0005478023715767
+    },
+    {
+      "outer_hold_id": 3,
+      "selected_config_id": "MLP_128_128_64_LR_3e-4",
+      "selected_inner_mean_score": 0.6812240684082029,
+      "parameter_count": 26438,
+      "runner_up_config_id": "MLP_128_64_LR_1e-3",
+      "runner_up_inner_mean_score": 0.6894580147964096,
+      "selection_margin": 0.008233946388206625
+    }
+  ],
+  "neural_outer_mean_primary_score": 0.5811320464394895,
+  "extra_trees_outer_mean_primary_score": 0.5643904214600094,
+  "relative_improvement_vs_extra_trees": -0.02966319828067159,
+  "outer_folds_improved_vs_extra_trees": 0,
+  "outer_folds_total": 3,
+  "pair_groups_improved_vs_extra_trees": 7,
+  "pair_groups_total": 27,
+  "targets_improved_vs_extra_trees": 0,
+  "targets_total": 6,
+  "development_classification": "NEURAL_NOT_BETTER_THAN_CLASSICAL",
+  "locked_validation_numeric_rows_read": 0,
+  "source_mutation": "NONE",
+  "elapsed_seconds": 5044.082341194153
+}

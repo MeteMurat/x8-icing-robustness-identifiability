@@ -1,0 +1,26 @@
+﻿{
+    "status":  "PASS_P2_A7A_INTERPRETABILITY_UNCERTAINTY_PREANALYSIS_FREEZE",
+    "timestamp_local":  "2026-09-19T20:38:02.3268671+03:00",
+    "project_root":  "E:\\İCİNG-PROJE",
+    "run_root":  "E:\\İCİNG-PROJE\\_P2_ML\\P2_A7A_INTERPRETABILITY_UNCERTAINTY_PREANALYSIS_FREEZE_20260919_203802",
+    "parent_p2_a6c_sha256":  "D4FFD48A51DB6D18E2C57A092938687CE61978DC7ECB50A4330E045096213605",
+    "p2_a7a_contract":  {
+                            "path":  "E:\\İCİNG-PROJE\\_P2_ML\\P2_A7A_INTERPRETABILITY_UNCERTAINTY_PREANALYSIS_FREEZE_20260919_203802\\P2_A7A_INTERPRETABILITY_UNCERTAINTY_PREANALYSIS_CONTRACT.json",
+                            "sha256":  "CCC6A753C9E58DC622535201AAD2F68C6B4FEE6B0B85B57C72322CFD7EE1C9DB"
+                        },
+    "permutation_repeats":  20,
+    "permutation_seed":  20260919,
+    "permutation_features":  8,
+    "permutation_strata":  "EXACT_PAIR x OBSERVED_CONFIGURATION",
+    "uncertainty_tree_count":  256,
+    "uncertainty_bootstrap_replicates":  10000,
+    "uncertainty_bootstrap_seed":  20260919,
+    "support_error_bootstrap_replicates":  10000,
+    "support_error_bootstrap_seed":  20260919,
+    "model_training_runs":  0,
+    "model_refit_runs":  0,
+    "model_predict_calls":  0,
+    "locked_numeric_results_opened_for_new_A7_analysis":  0,
+    "source_mutation":  "NONE",
+    "next_stage":  "P2-A7B execute frozen group-preserving permutation importance, native forest importance, tree-ensemble dispersion/error diagnostics, and support-distance/error diagnostics. No model training/refit or protocol changes."
+}

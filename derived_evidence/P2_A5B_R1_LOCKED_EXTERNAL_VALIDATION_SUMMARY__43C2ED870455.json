@@ -1,0 +1,39 @@
+{
+  "execution_integrity": "PASS",
+  "scientific_adjudication": "DEFER_TO_P2_A5C",
+  "model_bundle_sha256": "1ADC46017D144EE830A0A42D64272695AC89C03D680D3A9BFE1407639A8E7EBB",
+  "locked_target_artifact_sha256": "57BBDE590A900B28D3DFB33C3958F42482456D91C2C023607EAA26AD502C59A2",
+  "raw_locked_source_rows_read": 20729,
+  "locked_target_rows": 20537,
+  "locked_joined_rows": 20537,
+  "locked_exact_pairs": 24,
+  "locked_files": 48,
+  "locked_flight_ids": [
+    4,
+    5,
+    6
+  ],
+  "max_abs_time_identity_difference": 0.0,
+  "prediction_passes": 1,
+  "model_predict_calls": 1,
+  "model_fit_calls": 0,
+  "model_refit_calls": 0,
+  "primary_locked_external_score": 0.5399890077502464,
+  "primary_bootstrap_ci_low_2p5": 0.5012355440389986,
+  "primary_bootstrap_ci_high_97p5": 0.5787152443492564,
+  "development_outer_mean_reference_score": 0.564390421460009,
+  "validation_to_development_score_ratio": 0.9567650109180821,
+  "validation_minus_development_score": -0.024401413709762565,
+  "target_macro_nrmse": {
+    "Faero_X": 0.5830697752025765,
+    "Faero_Y": 0.6324570926913483,
+    "Faero_Z": 0.34930358604839173,
+    "Maero_L": 0.6308710740342646,
+    "Maero_M": 0.49363831667913693,
+    "Maero_N": 0.5505942018457596
+  },
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 20260919,
+  "binary_success_threshold": "NONE",
+  "source_mutation": "NONE_PENDING_POSTCHECK"
+}

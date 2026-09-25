@@ -1,0 +1,21 @@
+﻿{
+    "status":  "PASS_P1_A5B_IDENTIFICATION_DRAG_FIT_AND_SENSITIVITY_EXECUTION",
+    "timestamp_local":  "2026-09-18T21:41:54.7440662+03:00",
+    "project_root":  "E:\\İCİNG-PROJE",
+    "dataset_root":  "E:\\İCİNG-PROJE",
+    "run_root":  "E:\\İCİNG-PROJE\\_P1_AUDIT\\P1_A5B_IDENTIFICATION_DRAG_FIT_20260918_214143",
+    "source_bundle_sha256":  "18D12A3A0A6603800F5D6961CC006F8C9C50533B16FEBACC7DF9E37FCD7EE689",
+    "source_mutation":  "NONE",
+    "parent_p1_a5a_binding":  "E:\\İCİNG-PROJE\\_P1_AUDIT\\P1_A5A_DRAG_PREANALYSIS_FREEZE_20260918_212928\\P1_A5A_BINDING.json",
+    "parent_p1_a5a_preanalysis_sha256":  "A42203F238BC2100FEA30E3632C603E517FDC565A47FDA4CC4E6C5E3134126EC",
+    "identification_drag_result_contract":  {
+                                                "path":  "E:\\İCİNG-PROJE\\_P1_AUDIT\\P1_A5B_IDENTIFICATION_DRAG_FIT_20260918_214143\\P1_A5B_IDENTIFICATION_DRAG_RESULT_CONTRACT.json",
+                                                "sha256":  "A446ED228B14BE2BDBC820D705990FED56571E9180E55F5FEE55C545C5FFEA91"
+                                            },
+    "branch_results":  "E:\\İCİNG-PROJE\\_P1_AUDIT\\P1_A5B_IDENTIFICATION_DRAG_FIT_20260918_214143\\P1_A5B_DRAG_BRANCH_RESULTS.csv",
+    "pair_support":  "E:\\İCİNG-PROJE\\_P1_AUDIT\\P1_A5B_IDENTIFICATION_DRAG_FIT_20260918_214143\\P1_A5B_PAIR_SUPPORT.csv",
+    "drag_outcomes_opened":  true,
+    "validation_drag_outcomes_opened":  false,
+    "drag_protocol_retuned":  false,
+    "next_stage":  "STOP FOR REVIEW; then locked ID\u003e=4 drag validation if warranted."
+}

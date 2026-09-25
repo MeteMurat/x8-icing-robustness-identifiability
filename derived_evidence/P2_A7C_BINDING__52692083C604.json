@@ -1,0 +1,23 @@
+﻿{
+    "status":  "PASS_P2_A7C_TERMINAL_INTERPRETABILITY_UNCERTAINTY_ADJUDICATION",
+    "timestamp_local":  "2026-09-19T21:08:39.6407658+03:00",
+    "project_root":  "E:\\İCİNG-PROJE",
+    "run_root":  "E:\\İCİNG-PROJE\\_P2_ML\\P2_A7C_TERMINAL_INTERPRETABILITY_UNCERTAINTY_ADJUDICATION_20260919_210839",
+    "parent_p2_a7b_sha256":  "820CA38EF0C163C1CC38E9352E22FC3D004A76A888B0B5A9CCBF2D269368BC02",
+    "p2_a7c_contract":  {
+                            "path":  "E:\\İCİNG-PROJE\\_P2_ML\\P2_A7C_TERMINAL_INTERPRETABILITY_UNCERTAINTY_ADJUDICATION_20260919_210839\\P2_A7C_TERMINAL_INTERPRETABILITY_UNCERTAINTY_ADJUDICATION_CONTRACT.json",
+                            "sha256":  "1C70C194FF153269AB1F45213946040B92E0649BFC58E3ACF45A506F18A384F8"
+                        },
+    "p2_stage_status":  "P2_COMPLETE",
+    "claim_tier":  "TIER_2_MODEL_DIAGNOSTIC_INTERPRETABILITY_AND_VALIDITY",
+    "strongest_continuous_dependency":  "alpha",
+    "supported_continuous_dependencies":  8,
+    "native_permutation_spearman_rho":  0.92857142857142883,
+    "positive_tree_dispersion_targets":  4,
+    "support_distance_error_spearman_rho":  0.81826086956521726,
+    "model_training_runs":  0,
+    "model_refit_runs":  0,
+    "model_predict_calls":  0,
+    "source_mutation":  "NONE",
+    "next_stage":  "P3-A0 three-dimensional ice-shape / CFD scientific-question and provenance preanalysis freeze, unless a manuscript-synthesis gate is intentionally inserted first."
+}

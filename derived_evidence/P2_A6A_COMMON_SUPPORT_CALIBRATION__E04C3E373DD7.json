@@ -1,0 +1,52 @@
+{
+  "development_rows": 23210,
+  "exact_pair_groups": 27,
+  "continuous_features": [
+    "Va_EKF_CG",
+    "alpha",
+    "beta",
+    "p",
+    "q",
+    "r",
+    "aileron",
+    "elevator"
+  ],
+  "continuous_feature_weighted_mean": [
+    17.846591357787972,
+    0.018564537676038925,
+    -0.027948259344189295,
+    -0.010179213518875302,
+    0.003795732114449488,
+    0.004023717322798674,
+    -0.04234260944366192,
+    -0.0035326745426875273
+  ],
+  "continuous_feature_weighted_sd": [
+    0.8166227105008967,
+    0.027002663408731847,
+    0.032042560924917786,
+    0.21167210963614894,
+    0.20927878970499908,
+    0.08630784195657205,
+    0.03600660063314948,
+    0.030737715319333683
+  ],
+  "clean_ice_status_value": 0.0,
+  "iced_ice_status_value": 1.0,
+  "knn_k": 10,
+  "distance_metric": "euclidean_on_development_weighted_standardized_continuous_features",
+  "cross_configuration_distance_statistic": "mean_distance_to_10_nearest_opposite_configuration_development_rows",
+  "threshold_weighting": "pair_and_configuration_balanced",
+  "threshold_q90": 1.743944685367989,
+  "threshold_q95": 2.4461378687033077,
+  "threshold_q99": 4.228719709886236,
+  "primary_common_support_rule": "d_clean<=q95 AND d_iced<=q95",
+  "sensitivity_common_support_rules": [
+    "d_clean<=q90 AND d_iced<=q90",
+    "d_clean<=q99 AND d_iced<=q99"
+  ],
+  "development_join_sha256": "9F967D2A6A08F154CE805E31C19F6DE85D67D144EBEE5EA9077033DAD7D8E960",
+  "sklearn_version": "1.7.2",
+  "model_predictions_computed": 0,
+  "locked_validation_rows_opened": 0
+}

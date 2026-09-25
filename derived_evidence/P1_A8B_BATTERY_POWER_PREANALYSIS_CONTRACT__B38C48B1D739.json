@@ -1,0 +1,199 @@
+﻿{
+    "contract_name":  "NTNU_X8_ICING_P1_A8B_BATTERY_POWER_SEMANTIC_AUDIT_AND_PREANALYSIS_FREEZE",
+    "timestamp_local":  "2026-09-18T22:55:00.2571733+03:00",
+    "provenance":  {
+                       "source_bundle_sha256":  "18D12A3A0A6603800F5D6961CC006F8C9C50533B16FEBACC7DF9E37FCD7EE689",
+                       "parent_p1_a8a_identifiability_scope_sha256":  "143D18C964D4848ED23BF3652E9A23B1B68DA69DD63A1D846CF6BD8058A5B517",
+                       "parent_p1_a7d_final_reference_efficiency_sha256":  "E1027F00BD8E6BC9F322179E3CBA715BCFA5BE5E5F3386EA3B206570D57C9AF8",
+                       "parent_p1_a5a_reference_state_sha256":  "A42203F238BC2100FEA30E3632C603E517FDC565A47FDA4CC4E6C5E3134126EC",
+                       "numeric_battery_power_rows_read":  0,
+                       "new_battery_power_outcomes_computed":  0,
+                       "endurance_outcomes_computed":  0,
+                       "range_outcomes_computed":  0,
+                       "source_mutation":  "NONE"
+                   },
+    "source_semantics":  {
+                             "primary_channel":  "battery_power",
+                             "source_definition":  "Total battery power",
+                             "unit":  "W",
+                             "source_classification":  "MODEL_AGNOSTIC_CHANNEL_PER_DATASET_README",
+                             "voltage_channel":  {
+                                                     "name":  "voltage",
+                                                     "unit":  "V",
+                                                     "source_definition":  "Battery voltage"
+                                                 },
+                             "current_channel":  {
+                                                     "name":  "current",
+                                                     "unit":  "A",
+                                                     "source_definition":  "Battery current"
+                                                 },
+                             "RPS_channel":  {
+                                                 "name":  "RPS",
+                                                 "source_definition":  "Motor speed in revolutions per second",
+                                                 "note":  "Use source semantics here; no reinterpretation as rad/s in this battery-power branch."
+                                             },
+                             "throttle_channel":  {
+                                                      "name":  "throttle",
+                                                      "unit":  "nd",
+                                                      "source_definition":  "Non-dimensional throttle command (0 to 1)"
+                                                  },
+                             "forbidden_substitute":  {
+                                                          "channel":  "P_drag_batt",
+                                                          "source_definition":  "Battery-derived aerodynamic drag power",
+                                                          "use":  "PROHIBITED_AS_PRIMARY_OR_SENSITIVITY_OUTCOME"
+                                                      },
+                             "explicit_non_equivalences":  [
+                                                               "battery_power != aerodynamic drag power P_D",
+                                                               "battery_power != shaft power",
+                                                               "battery_power != propeller mechanical power",
+                                                               "battery_power is not an energy quantity",
+                                                               "battery_power alone does not determine endurance without usable battery energy",
+                                                               "battery_power alone does not determine range without a mission/steady-flight model"
+                                                           ]
+                         },
+    "frozen_reference_state":  {
+                                   "Va_ref_m_s":  17.331487670552868,
+                                   "alpha_ref_rad":  0.022210277661747789,
+                                   "q_hat_ref":  0.00043487936752760166,
+                                   "delta_e_ref_rad":  -0.002822781716110348,
+                                   "beta_ref_rad_for_nuisance":  0,
+                                   "Va_dot_ref_m_s2_for_kinematic_sensitivity":  0,
+                                   "gamma_proxy_ref_rad_for_kinematic_sensitivity":  0
+                               },
+    "primary_estimator":  {
+                              "response":  "battery_power [W]",
+                              "independent_unit":  "exact longitudinal maneuver filename pair",
+                              "support":  "same frozen B0 common envelope used by A5/A7",
+                              "centered_predictors":  [
+                                                          "Va_c = Va - Va_ref",
+                                                          "alpha_c = alpha - alpha_ref",
+                                                          "alpha_c^2",
+                                                          "q_hat_c = q_hat - q_hat_ref",
+                                                          "delta_e_c = delta_e - delta_e_ref"
+                                                      ],
+                              "model":  "P_batt = mu_pair + beta\u0027X + I_ice*(gamma_0 + gamma\u0027X) + error",
+                              "clean_reference":  "P_batt,clean,ref = arithmetic mean across represented exact-pair intercepts mu_pair",
+                              "iced_reference":  "P_batt,iced,ref = P_batt,clean,ref + gamma_0",
+                              "primary_effect":  "Delta P_batt,ref = P_batt,iced,ref - P_batt,clean,ref = gamma_0",
+                              "relative_penalty":  "delta_P_batt,ref = Delta P_batt,ref / P_batt,clean,ref",
+                              "interpretation":  "state-conditioned empirical total-battery-power difference at the frozen common aerodynamic reference state",
+                              "not_steady_cruise":  true,
+                              "not_mission_average":  true
+                          },
+    "hypothesis":  {
+                       "id":  "HE_B1",
+                       "null":  "Delta P_batt,ref \u003c= 0 W",
+                       "alternative":  "Delta P_batt,ref \u003e 0 W",
+                       "alpha":  0.05,
+                       "sign_policy":  "Use source battery_power sign as stored. Do not flip sign post hoc.",
+                       "one_sided_inference":  "pair-cluster leave-one-exact-pair-out jackknife SE with Student-t reference df=G-1"
+                   },
+    "branches":  {
+                     "PRIMARY":  {
+                                     "role":  "PRIMARY_CLAIM_GATE",
+                                     "model":  "frozen state model with row-weighted slope fit and equal-pair reference intercept"
+                                 },
+                     "EQUAL_PAIR":  {
+                                        "role":  "REQUIRED_CLAIM_GATE",
+                                        "model":  "each exact maneuver pair contributes equal total slope-fit weight"
+                                    },
+                     "BETA_AUG":  {
+                                      "role":  "REQUIRED_CLAIM_GATE",
+                                      "model":  "add beta_c = beta - 0 as nuisance predictor"
+                                  },
+                     "KINEMATIC_ENERGY_STATE_AUG":  {
+                                                        "role":  "REQUIRED_CLAIM_GATE",
+                                                        "model":  "add Va_EKF_CG_dot centered at 0 and gamma_proxy=(theta-alpha) centered at 0 as kinematic energy-state nuisance predictors",
+                                                        "rationale":  "test whether the battery-power direction survives adjustment for acceleration and climb/descent proxy during maneuvers"
+                                                    },
+                     "THROTTLE_AUG":  {
+                                          "role":  "DESCRIPTIVE_MECHANISM_SENSITIVITY_ONLY",
+                                          "model":  "add throttle centered at its configuration-common pooled reference value",
+                                          "rationale":  "throttle is potentially on the propulsion-demand pathway; adjustment changes estimand and is therefore not a primary claim gate"
+                                      },
+                     "RPS_AUG":  {
+                                     "role":  "DESCRIPTIVE_MECHANISM_SENSITIVITY_ONLY",
+                                     "model":  "add source-semantic RPS centered at its configuration-common pooled reference value",
+                                     "rationale":  "RPS is potentially on the propulsion-demand pathway; adjustment changes estimand and is therefore not a primary claim gate"
+                                 },
+                     "VOLTAGE_CURRENT_DIAGNOSTIC":  {
+                                                        "role":  "SEMANTIC_DIAGNOSTIC_ONLY",
+                                                        "definition":  "P_VI = voltage * current",
+                                                        "rule":  "Report sign agreement/correlation/scale comparison with battery_power; do not replace battery_power or retune HE_B1 based on this diagnostic."
+                                                    }
+                 },
+    "required_claim_gate_branches":  [
+                                         "PRIMARY",
+                                         "EQUAL_PAIR",
+                                         "BETA_AUG",
+                                         "KINEMATIC_ENERGY_STATE_AUG"
+                                     ],
+    "identification_gate":  {
+                                "ids":  "1-3",
+                                "expected_exact_longitudinal_pairs":  12,
+                                "minimum_common_envelope_rows_each_configuration_per_pair":  25,
+                                "minimum_represented_pairs":  10,
+                                "full_rank_required":  true,
+                                "maximum_scaled_condition_number":  30,
+                                "maximum_largest_cluster_fraction":  0.2,
+                                "battery_power_finiteness":  "\u003e=99% finite among otherwise eligible rows",
+                                "sign_semantic_gate":  "P_batt,clean,ref and P_batt,iced,ref must both be \u003e0 W; no post-hoc sign inversion permitted",
+                                "relative_penalty_denominator":  "P_batt,clean,ref \u003e 0 in full fit and every leave-one-pair-out refit"
+                            },
+    "validation_gate":  {
+                            "ids":  "\u003e=4",
+                            "expected_exact_longitudinal_pairs":  10,
+                            "unmatched_longitudinal_files":  "excluded",
+                            "minimum_common_envelope_rows_each_configuration_per_pair":  25,
+                            "minimum_represented_pairs":  6,
+                            "full_rank_required":  true,
+                            "maximum_scaled_condition_number":  30,
+                            "maximum_largest_cluster_fraction":  0.25,
+                            "battery_power_finiteness":  "\u003e=99% finite among otherwise eligible rows",
+                            "sign_semantic_gate":  "P_batt,clean,ref and P_batt,iced,ref must both be \u003e0 W; no post-hoc sign inversion permitted",
+                            "relative_penalty_denominator":  "P_batt,clean,ref \u003e 0 in full fit and every leave-one-pair-out refit"
+                        },
+    "claim_classification":  {
+                                 "identification":  {
+                                                        "robust":  "support/numerics/sign gates PASS + primary Delta P_batt,ref\u003e0 + all required claim-gate branch directions positive",
+                                                        "model_sensitive":  "primary Delta P_batt,ref\u003e0 but at least one required claim-gate branch is nonpositive",
+                                                        "no_increase":  "primary Delta P_batt,ref\u003c=0",
+                                                        "insufficient":  "support/numerical/sign gate failure"
+                                                    },
+                                 "validation":  {
+                                                    "confirmed_strong":  "support/numerics/sign gates PASS + Delta P_batt,ref\u003e0 + all required claim-gate branch directions positive + one-sided p\u003c=0.05",
+                                                    "directionally_replicated":  "same positive robust direction but one-sided p\u003e0.05",
+                                                    "model_sensitive":  "primary positive but at least one required claim-gate branch is nonpositive",
+                                                    "not_replicated":  "primary Delta P_batt,ref\u003c=0",
+                                                    "insufficient":  "support/numerical/sign gate failure"
+                                                }
+                             },
+    "uncertainty_policy":  {
+                               "cluster":  "exact maneuver filename pair",
+                               "primary":  "leave-one-exact-pair-out cluster jackknife",
+                               "row_iid":  "PROHIBITED",
+                               "identification_validation_pooling":  "PROHIBITED",
+                               "relative_penalty":  "recompute full clean/iced reference estimates and ratio in every leave-one-pair-out refit"
+                           },
+    "scientific_boundaries":  {
+                                  "authorized_if_future_validation_succeeds":  [
+                                                                                   "state-conditioned empirical total-battery-power difference at the frozen common reference state",
+                                                                                   "relative reference-state total-battery-power penalty if denominator gates pass",
+                                                                                   "identification and locked-validation results reported separately"
+                                                                               ],
+                                  "not_authorized":  [
+                                                         "motor shaft-power penalty",
+                                                         "propeller mechanical-power penalty",
+                                                         "aerodynamic drag-power equivalence",
+                                                         "battery-energy penalty",
+                                                         "endurance loss",
+                                                         "range loss",
+                                                         "mission-average power penalty",
+                                                         "steady-cruise power requirement",
+                                                         "full causal attribution solely to ice morphology"
+                                                     ],
+                                  "source_specific_warning":  "P_drag_batt is explicitly model-dependent and remains prohibited as the A8 primary outcome."
+                              },
+    "gate_status":  "PASS_P1_A8B_BATTERY_POWER_SEMANTIC_AUDIT_AND_PREANALYSIS_FREEZE",
+    "next_stage":  "P1-A8C IDENTIFICATION EMPIRICAL BATTERY-POWER EXECUTION"
+}

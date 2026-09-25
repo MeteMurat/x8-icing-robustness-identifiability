@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this reproducibility package, please cite the associated manuscript and the source NTNU dataset."
+title: "Reproducibility package for Cross-Method Robustness and Aero-Propulsive Identifiability of Icing-Associated Aerodynamic Degradation"
+type: software
+authors:
+  - family-names: "Türkoğlu"
+    given-names: "Murat Metehan"
+version: "1.0.0"
+date-released: "2026-09-25"
+repository-code: "https://github.com/MeteMurat/x8-icing-robustness-identifiability"
+url: "https://github.com/MeteMurat/x8-icing-robustness-identifiability/releases/tag/v1.0.0"

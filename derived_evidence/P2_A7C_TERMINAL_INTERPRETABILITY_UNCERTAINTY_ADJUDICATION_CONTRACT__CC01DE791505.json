@@ -1,0 +1,89 @@
+﻿{
+    "contract_name":  "NTNU_X8_ICING_P2_A7C_TERMINAL_INTERPRETABILITY_UNCERTAINTY_ADJUDICATION",
+    "timestamp_local":  "2026-09-19T21:08:39.5592396+03:00",
+    "provenance":  {
+                       "parent_p2_a7b_sha256":  "820CA38EF0C163C1CC38E9352E22FC3D004A76A888B0B5A9CCBF2D269368BC02",
+                       "parent_p2_a7a_sha256":  "CCC6A753C9E58DC622535201AAD2F68C6B4FEE6B0B85B57C72322CFD7EE1C9DB",
+                       "parent_p2_a6c_sha256":  "D4FFD48A51DB6D18E2C57A092938687CE61978DC7ECB50A4330E045096213605",
+                       "parent_p2_a5c_sha256":  "8E428E8F0B596F15FB09A2BF96F5129A638B7C5D5E832E9002FDB70BA777907F",
+                       "final_model_bundle_sha256":  "1ADC46017D144EE830A0A42D64272695AC89C03D680D3A9BFE1407639A8E7EBB"
+                   },
+    "scientific_adjudication":  {
+                                    "claim_tier":  "TIER_2_MODEL_DIAGNOSTIC_INTERPRETABILITY_AND_VALIDITY",
+                                    "interpretability":  {
+                                                             "all_eight_continuous_dependencies_supported":  true,
+                                                             "strongest_continuous_dependency":  "alpha",
+                                                             "strongest_delta_nrmse":  0.20093386346372077,
+                                                             "strongest_ci_95":  [
+                                                                                     0.10582075361213703,
+                                                                                     0.30455974720772827
+                                                                                 ],
+                                                             "ranking":  [
+                                                                             "alpha",
+                                                                             "beta",
+                                                                             "q",
+                                                                             "aileron",
+                                                                             "elevator",
+                                                                             "p",
+                                                                             "r",
+                                                                             "Va_EKF_CG"
+                                                                         ],
+                                                             "causal_attribution_authorized":  false,
+                                                             "physical_derivative_inference_authorized":  false
+                                                         },
+                                    "native_importance":  {
+                                                              "spearman_rho_vs_permutation":  0.92857142857142883,
+                                                              "concordance_class":  "STRONG_DESCRIPTIVE_RANK_CONCORDANCE",
+                                                              "role":  "SECONDARY_DESCRIPTIVE_ONLY"
+                                                          },
+                                    "uncertainty":  {
+                                                        "claim_class":  "PARTIAL_TARGET_SPECIFIC_UNCERTAINTY_DIAGNOSTIC_UTILITY",
+                                                        "positive_target_associations":  4,
+                                                        "inconclusive_target_associations":  2,
+                                                        "inverse_target_associations":  0,
+                                                        "calibrated_prediction_interval_authorized":  false,
+                                                        "probabilistic_calibration_authorized":  false
+                                                    },
+                                    "support_validity":  {
+                                                             "claim_class":  "STRONG_POSITIVE_VALIDITY_DIAGNOSTIC_ASSOCIATION",
+                                                             "spearman_rho":  0.81826086956521726,
+                                                             "ci_95":  [
+                                                                           0.61310043668122272,
+                                                                           0.9119727991795914
+                                                                       ],
+                                                             "positive_association_supported":  true,
+                                                             "universal_ood_guarantee_authorized":  false
+                                                         },
+                                    "ice_status_generic_permutation":  "EXCLUDED",
+                                    "ice_status_physics_interpretation":  "P2-A6_ONLY"
+                                },
+    "manuscript_claim_hierarchy":  {
+                                       "primary_interpretability":  "All eight continuous state/control predictors showed supported predictive dependence under the prospectively frozen within-pair/configuration permutation test. Angle of attack (alpha) was the strongest continuous predictor, with a pair-macro DeltaNRMSE of 0.20093 and a 95% exact-pair bootstrap interval of 0.10582-0.30456.",
+                                       "ranking":  "The frozen continuous-feature ranking was alpha \u003e beta \u003e q \u003e aileron \u003e elevator \u003e p \u003e r \u003e Va_EKF_CG.",
+                                       "native_concordance":  "The native ExtraTrees impurity ranking was strongly concordant with the locked permutation ranking across the eight continuous predictors (Spearman rho = 0.9286), providing an internal descriptive cross-check rather than an independent significance test.",
+                                       "uncertainty":  "Across the six aerodynamic force/moment targets, tree-ensemble dispersion was positively associated with locked prediction error for four targets and inconclusive for two targets. It is therefore retained only as a target-specific ensemble-disagreement diagnostic, not as a calibrated predictive interval.",
+                                       "support_validity":  "Distance from the frozen development support was strongly positively associated with locked pair-level prediction error (Spearman rho = 0.8183; 95% exact-pair bootstrap CI 0.6131-0.9120), supporting support-aware interpretation of surrogate predictions.",
+                                       "ice_status":  "ice_status is intentionally excluded from generic permutation ranking; its physics-facing interpretation remains the P2-A6 common-support counterfactual drag-consistency analysis.",
+                                       "prohibited_overreach":  [
+                                                                    "Do not describe permutation importance as causal feature importance.",
+                                                                    "Do not interpret permutation ranking as an aerodynamic derivative ranking.",
+                                                                    "Do not treat tree-ensemble spread as a calibrated 95% predictive interval.",
+                                                                    "Do not claim that support distance provides universal out-of-distribution detection.",
+                                                                    "Do not reopen model selection, neural architecture search, or hyperparameter tuning based on A7 results.",
+                                                                    "Do not replace P2-A6 ice-status counterfactual physics evidence with generic feature importance."
+                                                                ]
+                                   },
+    "guardrails":  {
+                       "new_model_training_runs":  0,
+                       "model_refit_runs":  0,
+                       "model_predict_calls":  0,
+                       "permutation_protocol_changes":  0,
+                       "uncertainty_protocol_changes":  0,
+                       "support_threshold_changes":  0,
+                       "source_mutation":  "NONE",
+                       "model_mutation":  "NONE"
+                   },
+    "classification":  "PASS_P2_A7C_TERMINAL_INTERPRETABILITY_UNCERTAINTY_ADJUDICATION",
+    "p2_stage_status":  "P2_COMPLETE",
+    "next_stage":  "P3-A0 three-dimensional ice-shape / CFD scientific-question and provenance preanalysis freeze, unless a manuscript-synthesis gate is intentionally inserted first."
+}

@@ -1,0 +1,20 @@
+﻿{
+    "status":  "PASS_P2_A7B_FROZEN_INTERPRETABILITY_UNCERTAINTY_EXECUTION_INTEGRITY",
+    "timestamp_local":  "2026-09-19T20:50:39.8546026+03:00",
+    "project_root":  "E:\\İCİNG-PROJE",
+    "run_root":  "E:\\İCİNG-PROJE\\_P2_ML\\P2_A7B_FROZEN_INTERPRETABILITY_UNCERTAINTY_EXECUTION_20260919_204208",
+    "parent_p2_a7a_sha256":  "CCC6A753C9E58DC622535201AAD2F68C6B4FEE6B0B85B57C72322CFD7EE1C9DB",
+    "p2_a7b_contract":  {
+                            "path":  "E:\\İCİNG-PROJE\\_P2_ML\\P2_A7B_FROZEN_INTERPRETABILITY_UNCERTAINTY_EXECUTION_20260919_204208\\P2_A7B_FROZEN_INTERPRETABILITY_UNCERTAINTY_EXECUTION_CONTRACT.json",
+                            "sha256":  "820CA38EF0C163C1CC38E9352E22FC3D004A76A888B0B5A9CCBF2D269368BC02"
+                        },
+    "top_permutation_feature":  "alpha",
+    "top_feature_delta_nrmse":  0.20093386346372075,
+    "supported_dependency_count":  8,
+    "positive_tree_dispersion_target_count":  4,
+    "support_error_classification":  "POSITIVE_ASSOCIATION",
+    "model_training_runs":  0,
+    "model_refit_runs":  0,
+    "source_mutation":  "NONE",
+    "next_stage":  "P2-A7C terminal interpretability/uncertainty adjudication and manuscript claim freeze from these frozen results only. No model or protocol changes."
+}

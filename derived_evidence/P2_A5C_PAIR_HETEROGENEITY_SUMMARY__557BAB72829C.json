@@ -1,0 +1,10 @@
+﻿{
+    "pair_count":  24,
+    "median_nrmse":  0.55380684921004064,
+    "q1_nrmse":  0.45358973860528656,
+    "q3_nrmse":  0.61575038634809376,
+    "min_nrmse":  0.3947630544202067,
+    "max_nrmse":  0.73412768868637379,
+    "pairs_below_development_point_estimate":  12,
+    "pairs_above_development_point_estimate":  12
+}

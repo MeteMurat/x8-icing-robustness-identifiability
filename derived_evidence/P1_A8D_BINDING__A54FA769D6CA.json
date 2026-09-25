@@ -1,0 +1,19 @@
+﻿{
+    "status":  "PASS_P1_A8D_LOCKED_VALIDATION_EMPIRICAL_BATTERY_POWER_EXECUTION",
+    "timestamp_local":  "2026-09-19T12:27:38.3207819+03:00",
+    "project_root":  "E:\\İCİNG-PROJE",
+    "dataset_root":  "E:\\İCİNG-PROJE",
+    "run_root":  "E:\\İCİNG-PROJE\\_P1_AUDIT\\P1_A8D_LOCKED_VALIDATION_EMPIRICAL_BATTERY_POWER_20260919_122719",
+    "source_bundle_sha256":  "18D12A3A0A6603800F5D6961CC006F8C9C50533B16FEBACC7DF9E37FCD7EE689",
+    "parent_p1_a8b_preanalysis_sha256":  "C7B019A19D6E373D23F5F32E324BED3977A769B4779B7B3BDBAF9B2A2FCD0C3E",
+    "parent_p1_a8c_identification_result_sha256":  "41D54A2DC55A8B5BFBBB6B045BC692D02BBA1A72964D8DCAE8F229BB6BF053B9",
+    "parent_p1_a8c_classification":  "BATTERY_POWER_SIGNAL_ROBUST_IDENTIFICATION",
+    "validation_battery_power_result_contract":  {
+                                                     "path":  "E:\\İCİNG-PROJE\\_P1_AUDIT\\P1_A8D_LOCKED_VALIDATION_EMPIRICAL_BATTERY_POWER_20260919_122719\\P1_A8D_VALIDATION_BATTERY_POWER_RESULT_CONTRACT.json",
+                                                     "sha256":  "A64E632EC0450820652CA979D1E52B732A441EC5CF36009DE1CCDD24179601D9"
+                                                 },
+    "classification":  "CONFIRMED_STRONG",
+    "validation_battery_power_outcomes_opened":  true,
+    "source_mutation":  "NONE",
+    "next_stage":  "STOP FOR REVIEW; final validation adjudication/claim freeze only. Do not pool ID and validation effects."
+}
