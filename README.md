@@ -28,10 +28,10 @@ The repository does **not** convert within-campaign methodological convergence i
 
 ## Supplementary visualization
 
-The tagged release v1.0.1 contains `x8_icing_evidence_overview.mp4`, a short explanatory visualization of the manuscript-reported multiplicity, support, cross-method, and propulsion-sensitivity results. The video is explanatory only; it is not an additional inferential evidence layer.
+The tagged release v1.0.2 contains `x8_icing_evidence_overview.mp4`, a short explanatory visualization of the manuscript-reported multiplicity, support, cross-method, and propulsion-sensitivity results. The video is explanatory only; it is not an additional inferential evidence layer.
 
 ## Version
 
-Manuscript-associated public release: https://github.com/MeteMurat/x8-icing-robustness-identifiability/releases/tag/v1.0.1
+Manuscript-associated public release: https://github.com/MeteMurat/x8-icing-robustness-identifiability/releases/tag/v1.0.2
 
 File integrity: `manifests/SHA256SUMS.csv`
