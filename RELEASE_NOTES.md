@@ -1,16 +1,17 @@
-# Manuscript-associated reproducibility release v1.0.0
+# Manuscript-associated reproducibility release v1.0.3
 
-This release accompanies the fixed-wing UAV icing robustness-and-identifiability manuscript.
+This release binds the public reproducibility repository to the final Aerospace Science and Technology submission manuscript.
 
-It contains:
-- reader-facing verification and visualization code;
-- selected non-proprietary scientific analysis scripts exported from the local project tree;
-- selected small derived evidence files;
-- publication figures;
-- SHA-256 manifests;
-- the explanatory `x8_icing_evidence_overview.mp4` video.
+Changes relative to v1.0.2:
+- updated the manuscript binding to the final AST-adapted TeX/PDF hashes;
+- removed the introductory workflow Figure 1 after final presentation review;
+- retained the scientific numerical results and claim boundaries unchanged;
+- retained the final synchronized publication figures and reader-facing reproducibility assets;
+- preserved the explanatory evidence-overview video as non-inferential supplementary media.
 
-The original NTNU flight-test dataset and authenticated 3-D ice geometry remain at:
+Source flight-test data and authenticated 3-D ice geometry remain at:
 https://doi.org/10.18710/NNHVBP
 
-The video and publication utilities summarize or verify manuscript-reported values; they do not constitute a new inferential analysis.
+Final manuscript hashes:
+- TeX SHA256: C6C1744AA2E4E097145C306E2BC9E39589C1A9AF726F686AA808FC7E949F4059
+- PDF SHA256: 9404EADB8D5938A16B9E2904E9DBEC0AE4C9FFD2C1C3B89D41448549980237D4

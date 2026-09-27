@@ -1,8 +1,13 @@
 Manuscript title:
 Cross-Method Robustness and Aero-Propulsive Identifiability of Icing-Associated Aerodynamic Degradation in Fixed-Wing UAV Flight Data
 
-Manuscript-associated repository release: v1.0.2
-TeX SHA256: BC8CF0CFD6A64DDD0F88D9A0D0E2D0872B7ABB8FC0F2D405F804B03C849525BB
-PDF SHA256: BA36C38535C416EE55CD38432D021BBC06D181EF452BB38E780ACBE3BBE44D64
+Target journal:
+Aerospace Science and Technology
+
+Manuscript-associated repository release: v1.0.3
+TeX SHA256: C6C1744AA2E4E097145C306E2BC9E39589C1A9AF726F686AA808FC7E949F4059
+PDF SHA256: 9404EADB8D5938A16B9E2904E9DBEC0AE4C9FFD2C1C3B89D41448549980237D4
+Highlights SHA256: CDD211492326528F00A0E1BC74148A6750DD19767E73ACE6C2FD7DB82199F7A5
 Source flight-data DOI: https://doi.org/10.18710/NNHVBP
 Repository: https://github.com/MeteMurat/x8-icing-robustness-identifiability
+Figure 1 status: REMOVED
